@@ -1,0 +1,20 @@
++++
+title = "WireGuard"
+slug = "WireGuard"
+date = "2019-03-01"
+categories = ["technology"]
+tags = ["WireGuard","VPN"]
+thumbnailImagePosition = "left"
+thumbnailImage = "/media/2019/0301.jpg"
++++
+
+WireGuard VPN
+<!--more-->
+## 前言
+
+WireGuard使用UDP传输数据，突破运营商对于SSH的限制。
+
+## 1.错误详情
+
+
+## 2.解决方案

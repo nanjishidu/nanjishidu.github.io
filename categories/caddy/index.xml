@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caddy on nanjishidu</title>
+    <link>https://gophper.com/categories/caddy.html</link>
+    <description>Recent content in Caddy on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/caddy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>web服务器caddy</title>
+      <link>https://gophper.com/2017/07/caddy.html</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/07/caddy.html</guid>
+      <description>&lt;p&gt;caddy是go语言开发web服务器,功能强大，二进制分发，便于部署。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

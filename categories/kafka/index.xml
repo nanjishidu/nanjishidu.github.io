@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kafka on nanjishidu</title>
+    <link>https://gophper.com/categories/kafka.html</link>
+    <description>Recent content in Kafka on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/kafka/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>学习kafka</title>
+      <link>https://gophper.com/2017/01/kafka.html</link>
+      <pubDate>Sat, 21 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/01/kafka.html</guid>
+      <description>&lt;p&gt;Apache Kafka是由Apache软件基金会开发的一个开源消息中间件项目，由Scala写成。
+Kafka是一种分布式的，基于发布/订阅的消息系统。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

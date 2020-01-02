@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ntpdate on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/ntpdate.html</link>
+    <description>Recent content in ntpdate on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/ntpdate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>树莓派时间同步</title>
+      <link>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</guid>
+      <description>&lt;p&gt;树莓派没有硬件时钟，重启后时间就会重置，通过ntpdate命令进行时间同步。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

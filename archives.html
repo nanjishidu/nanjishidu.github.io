@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="nanjishidu personal blog">
+
+
+<meta property="og:description" content="nanjishidu personal blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Archives">
+<meta name="twitter:title" content="Archives">
+<meta property="og:url" content="https://nanjishidu.me/archives.html">
+<meta property="twitter:url" content="https://nanjishidu.me/archives.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="nanjishidu personal blog">
+<meta name="twitter:description" content="nanjishidu personal blog">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>Archives</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://nanjishidu.me/archives/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/archives.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <div id="archives" class="main-content-wrap">
+          <form id="filter-form" action="#">
+            <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
+          </form>
+          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="no post found" data-message-one="1 post found" data-message-other="{n} posts found"></h5>
+<section class="boxes">
+  
+    
+    <div class="archive archive-year box" data-date="2019">
+      <h4 class="archive-title" style="text-decoration: none;">2019</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201911">
+          <h5 class="archive-title" style="text-decoration: none;">November</h5>
+          
+            <li class="archive-post archive-day" data-date="20191129">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/11/mysql-master-slave.html">mysql主从同步</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201909">
+          <h5 class="archive-title" style="text-decoration: none;">September</h5>
+          
+            <li class="archive-post archive-day" data-date="20190902">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/09/blog-update.html">博客升级</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201903">
+          <h5 class="archive-title" style="text-decoration: none;">March</h5>
+          
+            <li class="archive-post archive-day" data-date="20190309">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/03/zhuan-buy-google-play-service.html">[转]解决无法在您所在的国家地区购买google play</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20190308">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/03/linux-mac-top.html">linux和macOS下top命令区别</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20190308">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/03/blog-update.html">博客升级</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201901">
+          <h5 class="archive-title" style="text-decoration: none;">January</h5>
+          
+            <li class="archive-post archive-day" data-date="20190119">
+              <a class="archive-post-title" href="https://nanjishidu.me/2019/01/alibaba-sms.html">阿里云通信模版变量字符限制</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2018">
+      <h4 class="archive-title" style="text-decoration: none;">2018</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201811">
+          <h5 class="archive-title" style="text-decoration: none;">November</h5>
+          
+            <li class="archive-post archive-day" data-date="20181124">
+              <a class="archive-post-title" href="https://nanjishidu.me/2018/11/netstat-lsof.html">查询网络接口占用</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201806">
+          <h5 class="archive-title" style="text-decoration: none;">June</h5>
+          
+            <li class="archive-post archive-day" data-date="20180623">
+              <a class="archive-post-title" href="https://nanjishidu.me/2018/06/mysql.html">mysql数据库导入导出</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201804">
+          <h5 class="archive-title" style="text-decoration: none;">April</h5>
+          
+            <li class="archive-post archive-day" data-date="20180404">
+              <a class="archive-post-title" href="https://nanjishidu.me/2018/04/raspberry-pi-zero.html">raspberry pi zero体验</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201801">
+          <h5 class="archive-title" style="text-decoration: none;">January</h5>
+          
+            <li class="archive-post archive-day" data-date="20180110">
+              <a class="archive-post-title" href="https://nanjishidu.me/2018/01/sersync-rsync-inotity.html">sersync基于rsync&#43;inotify实现数据实时同步</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20180108">
+              <a class="archive-post-title" href="https://nanjishidu.me/2018/01/2017-2018.html">总结2017展望2018</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2017">
+      <h4 class="archive-title" style="text-decoration: none;">2017</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201712">
+          <h5 class="archive-title" style="text-decoration: none;">December</h5>
+          
+            <li class="archive-post archive-day" data-date="20171218">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/12/blog-update.html">博客升级</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20171209">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/12/npm-check-updates-element-ui.html">npm-check-updates升级element-ui2.x</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201711">
+          <h5 class="archive-title" style="text-decoration: none;">November</h5>
+          
+            <li class="archive-post archive-day" data-date="20171125">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html">微信支付(退款结果通知)golang AES-256-ECB解密</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201710">
+          <h5 class="archive-title" style="text-decoration: none;">October</h5>
+          
+            <li class="archive-post archive-day" data-date="20171021">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/10/openssl-enc.html">openssl加密解压缩</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20171013">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/10/js.html">js常用速查</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20171010">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/10/vue-axios-post-abnormal.html">vue axios POST请求后端接收数据异常处理</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201707">
+          <h5 class="archive-title" style="text-decoration: none;">July</h5>
+          
+            <li class="archive-post archive-day" data-date="20170731">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/homebrew.html">定期更新Homebrew</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170725">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/node-exporter-cadvisor-alertmanager-prometheus-grafana.html">服务监控prometheus</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170721">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/caddy.html">web服务器caddy</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170720">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/docker-compose.html">docker-compose使用介绍</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170719">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/vscode.html">vscode搭建开发环境</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170711">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/07/gitea.html">搭建本地的gitea</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201706">
+          <h5 class="archive-title" style="text-decoration: none;">June</h5>
+          
+            <li class="archive-post archive-day" data-date="20170628">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/06/markdown-markdown.html">markdown 语法</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201705">
+          <h5 class="archive-title" style="text-decoration: none;">May</h5>
+          
+            <li class="archive-post archive-day" data-date="20170530">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/05/byte-order.html">字节序</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170528">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/05/golang-glide-vendor.html">Glide:Package Management for Golang</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170526">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/05/git-gitignore.html">编写.gitignore</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170525">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/05/shell-eof.html">通过shell写入多行文本</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170507">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/05/docker-redis.html">docker构建redis集群测试环境</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201704">
+          <h5 class="archive-title" style="text-decoration: none;">April</h5>
+          
+            <li class="archive-post archive-day" data-date="20170430">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/gophper-centos-selinux.html">[gophper]centos关闭selinux</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170429">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html">[gophper]服务器新旅程(virmach-vps-bbr)</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170427">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/gophper-nginx-ngx_http_addition_module-ngx_http_sub_module.html">[gophper]nginx模块实现追加和修改响应内容</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170423">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html">mac终端环境Iterm2 zsh oh-my-zsh screen</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170417">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/golang-vendor.html">golang vendor介绍</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170416">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/04/golang-aes.html">golang使用aes加密和解密</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201703">
+          <h5 class="archive-title" style="text-decoration: none;">March</h5>
+          
+            <li class="archive-post archive-day" data-date="20170322">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/linux-shell-compress.html">linux-shell压缩解压</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170321">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/linux-shell-text.html">linux-shell文本处理</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170320">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/linux-shell-file.html">linux-shell文件</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170319">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/linux-shell-command.html">linux-shell常用命令</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170318">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/linux-shell-base.html">linux-shell基础</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170317">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/raspberry-ntpdate.html">树莓派时间同步</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170315">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/mac-shell.html">mac常用命令</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170311">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/03/golang-qr-code39-code128.html">golang生成二维码及相关条码介绍</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201702">
+          <h5 class="archive-title" style="text-decoration: none;">February</h5>
+          
+            <li class="archive-post archive-day" data-date="20170220">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html">[gophper]nginx添加密码访问</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170219">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/02/gophper-nginx-fancy.html">[gophper]nginx添加FancyIndex插件美化目录索引</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170215">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/02/docker-run.html">docker入门与实践</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201701">
+          <h5 class="archive-title" style="text-decoration: none;">January</h5>
+          
+            <li class="archive-post archive-day" data-date="20170121">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/01/kafka.html">学习kafka</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20170101">
+              <a class="archive-post-title" href="https://nanjishidu.me/2017/01/gophper-centos7.html">[gophper]centos7系统的改变</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2016">
+      <h4 class="archive-title" style="text-decoration: none;">2016</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201612">
+          <h5 class="archive-title" style="text-decoration: none;">December</h5>
+          
+            <li class="archive-post archive-day" data-date="20161230">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/instagram.html">备份instagram照片</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161225">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/ss.html">ss实现与国际接轨</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161219">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/gophper-nanjishidu.html">网站域名gophper.com替换为nanjishidu.me</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161210">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/gophper-https.html">[gophper]给网站加把小绿锁</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161208">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/gophper-nginx-config.html">[gophper]nginx日志配置</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161205">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/12/rsync-ssh.html">rsync同步</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201611">
+          <h5 class="archive-title" style="text-decoration: none;">November</h5>
+          
+            <li class="archive-post archive-day" data-date="20161117">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/11/raspberry-init.html">树莓派使用备忘</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20161109">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/11/gophper-aliyun-fault.html">[gophper]阿里云服务器异常排查</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201609">
+          <h5 class="archive-title" style="text-decoration: none;">September</h5>
+          
+            <li class="archive-post archive-day" data-date="20160903">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/09/golang-interface.html">golang接口使用</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201606">
+          <h5 class="archive-title" style="text-decoration: none;">June</h5>
+          
+            <li class="archive-post archive-day" data-date="20160602">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/06/gitbook.html">使用GitBook写书</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201604">
+          <h5 class="archive-title" style="text-decoration: none;">April</h5>
+          
+            <li class="archive-post archive-day" data-date="20160406">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/04/linux-grep-awk-sed.html">linux常用命令[grep,awk,sed]</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201603">
+          <h5 class="archive-title" style="text-decoration: none;">March</h5>
+          
+            <li class="archive-post archive-day" data-date="20160328">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/03/mysql-backup.html">mysql数据备份恢复</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20160321">
+              <a class="archive-post-title" href="https://nanjishidu.me/2016/03/git.html">git使用</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2015">
+      <h4 class="archive-title" style="text-decoration: none;">2015</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201512">
+          <h5 class="archive-title" style="text-decoration: none;">December</h5>
+          
+            <li class="archive-post archive-day" data-date="20151228">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/12/centos-ftp.html">centos配置ftp服务</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201508">
+          <h5 class="archive-title" style="text-decoration: none;">August</h5>
+          
+            <li class="archive-post archive-day" data-date="20150801">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/08/mac-skill.html">Mac使用过程小技巧</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201506">
+          <h5 class="archive-title" style="text-decoration: none;">June</h5>
+          
+            <li class="archive-post archive-day" data-date="20150616">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/06/gophper-backup-shell.html">[gophper]服务器备份脚本</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20150615">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/06/gophper-svn.html">[gophper]配置svn服务</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20150614">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/06/gophper-mysql.html">[gophper]配置mysql数据库</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20150613">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/06/gophper-iptables.html">[gophper]配置iptables防火墙</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201503">
+          <h5 class="archive-title" style="text-decoration: none;">March</h5>
+          
+            <li class="archive-post archive-day" data-date="20150310">
+              <a class="archive-post-title" href="https://nanjishidu.me/2015/03/mac-init.html">Mac配置初始化部署</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2014">
+      <h4 class="archive-title" style="text-decoration: none;">2014</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201412">
+          <h5 class="archive-title" style="text-decoration: none;">December</h5>
+          
+            <li class="archive-post archive-day" data-date="20141216">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/12/centos-brctl-set.html">centos网桥设置</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201410">
+          <h5 class="archive-title" style="text-decoration: none;">October</h5>
+          
+            <li class="archive-post archive-day" data-date="20141012">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/10/linux-snmpwalk.html">snmpwalk使用</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201409">
+          <h5 class="archive-title" style="text-decoration: none;">September</h5>
+          
+            <li class="archive-post archive-day" data-date="20140902">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/09/centos-ftp-user.html">centos中添加ftp用户</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201407">
+          <h5 class="archive-title" style="text-decoration: none;">July</h5>
+          
+            <li class="archive-post archive-day" data-date="20140706">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/07/centos-redis-init.html">centos安装redis2.8.19</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201406">
+          <h5 class="archive-title" style="text-decoration: none;">June</h5>
+          
+            <li class="archive-post archive-day" data-date="20140606">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/06/linux-ftp.html">linux下FTP上传下载</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20140604">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/06/ubuntu-init.html">ubuntu14.04安装初始化</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201405">
+          <h5 class="archive-title" style="text-decoration: none;">May</h5>
+          
+            <li class="archive-post archive-day" data-date="20140503">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/05/centos-postgres-init.html">centos安装postgres9.5</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201404">
+          <h5 class="archive-title" style="text-decoration: none;">April</h5>
+          
+            <li class="archive-post archive-day" data-date="20140419">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/04/linux-crontab.html">linux配置crontab</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20140409">
+              <a class="archive-post-title" href="https://nanjishidu.me/2014/04/arp-protection.html">使用arp拦截网络攻击</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    
+    <div class="archive archive-year box" data-date="2013">
+      <h4 class="archive-title" style="text-decoration: none;">2013</h4>
+      
+        <ul class="archive-posts archive-month" data-date="201308">
+          <h5 class="archive-title" style="text-decoration: none;">August</h5>
+          
+            <li class="archive-post archive-day" data-date="20130818">
+              <a class="archive-post-title" href="https://nanjishidu.me/2013/08/dns-dig.html">dig命令</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201307">
+          <h5 class="archive-title" style="text-decoration: none;">July</h5>
+          
+            <li class="archive-post archive-day" data-date="20130711">
+              <a class="archive-post-title" href="https://nanjishidu.me/2013/07/ubuntu-bind9.html">ubuntu安装bind9</a>
+            </li>
+          
+        </ul>
+      
+        <ul class="archive-posts archive-month" data-date="201301">
+          <h5 class="archive-title" style="text-decoration: none;">January</h5>
+          
+            <li class="archive-post archive-day" data-date="20130101">
+              <a class="archive-post-title" href="https://nanjishidu.me/2013/01/about.html">关于</a>
+            </li>
+          
+            <li class="archive-post archive-day" data-date="20130101">
+              <a class="archive-post-title" href="https://nanjishidu.me/2013/01/frend.html">友情链接</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+</section>
+        </div>
+      </div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+
+    
+  </body>
+</html>
+

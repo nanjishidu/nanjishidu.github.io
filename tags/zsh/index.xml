@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zsh on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/zsh.html</link>
+    <description>Recent content in zsh on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac终端环境Iterm2 zsh oh-my-zsh screen</title>
+      <link>https://nanjishidu.me/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</guid>
+      <description>&lt;p&gt;以前在mac环境下只使用默认终端工具，最近接触zsh和oh-my-zsh感觉功能挺强大，特此记录。同时对常用的screen命令进行简要介绍。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

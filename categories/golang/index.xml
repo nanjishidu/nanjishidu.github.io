@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on nanjishidu</title>
+    <link>https://gophper.com/categories/golang.html</link>
+    <description>Recent content in Golang on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微信支付(退款结果通知)golang AES-256-ECB解密</title>
+      <link>https://gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
+      <description>&lt;p&gt;处理微信支付退款结果通知时，需要对返回数据进行AES-256-ECB解密，golang标准库未支持AES ECB加解密，特此记录。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Glide:Package Management for Golang</title>
+      <link>https://gophper.com/2017/05/golang-glide-vendor.html</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/05/golang-glide-vendor.html</guid>
+      <description>&lt;p&gt;glide是golang的一个包管理工具。入门使用比较简单，使用过一段时间。随着第三方包增多,结构复杂后，发现对glide的理解并不深入，花时间整理下
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang vendor介绍</title>
+      <link>https://gophper.com/2017/04/golang-vendor.html</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/golang-vendor.html</guid>
+      <description>&lt;p&gt;golang vendor是为了解决golang依赖问题的，golang1.6后默认开启。经常遇到引入第三方包但是开源方更改了代码导致无法正常编译的情况。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang使用aes加密和解密</title>
+      <link>https://gophper.com/2017/04/golang-aes.html</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/golang-aes.html</guid>
+      <description>&lt;p&gt;密码学中的高级加密标准（Advanced Encryption Standard，AES)(对称加密算法)，又称Rijndael加密法，这个标准用来替代原先的DES。AES加密数据块分组长度必须为128bit，密钥长度可以是128bit、192bit、256bit中的任意一个。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang生成二维码及相关条码介绍</title>
+      <link>https://gophper.com/2017/03/golang-qr-code39-code128.html</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/golang-qr-code39-code128.html</guid>
+      <description>&lt;p&gt;最近业务需求需要通过golang生成二维码,研究了&lt;a href=&#34;https://github.com/boombuler/barcode&#34; target=&#34;_blank&#34;&gt;github.com/boombuler/barcode&lt;/a&gt;,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang接口使用</title>
+      <link>https://gophper.com/2016/09/golang-interface.html</link>
+      <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/09/golang-interface.html</guid>
+      <description>&lt;p&gt;interface类型定义了一组方法，如果某个对象实现了某个接口的所有方法，则此对象就实现了此接口
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

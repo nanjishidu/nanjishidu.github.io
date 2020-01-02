@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lets Encrypt on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/lets-encrypt.html</link>
+    <description>Recent content in Lets Encrypt on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/lets-encrypt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[gophper]给网站加把小绿锁</title>
+      <link>https://nanjishidu.me/2016/12/gophper-https.html</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/gophper-https.html</guid>
+      <description>&lt;p&gt;目前越来越多的网站开始支持https。&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Lets Encrypt&lt;/a&gt;提供免费的ssl证书服务,发现很多同学都在使用。
+最近阅读&lt;a href=&#34;https://undefinedblog.com/lets-encrypt/&#34;&gt;Lets Encrypt花三分钟免费接入ssl证书&lt;/a&gt;,
+发现已经有同学写了脚本进行证书获取，调用python写的acme_tiny。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

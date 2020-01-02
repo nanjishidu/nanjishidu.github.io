@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="参考Docker — 从入门到实践,记录学习docker过程中常用命令和Dokcerfile编写。">
+
+
+<meta property="og:description" content="参考Docker — 从入门到实践,记录学习docker过程中常用命令和Dokcerfile编写。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker入门与实践">
+<meta name="twitter:title" content="docker入门与实践">
+<meta property="og:url" content="https://nanjishidu.me/2017/02/docker-run.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2017/02/docker-run.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="参考Docker — 从入门到实践,记录学习docker过程中常用命令和Dokcerfile编写。">
+<meta name="twitter:description" content="参考Docker — 从入门到实践,记录学习docker过程中常用命令和Dokcerfile编写。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-02-15T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-02-15T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="docker">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2017/0215.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2017/0215.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>docker入门与实践</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2017/02/docker-run.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      docker入门与实践
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-02-15T00:00:00Z">
+        
+  February 15, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>参考<a href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank">Docker — 从入门到实践</a>,记录学习docker过程中常用命令和Dokcerfile编写。</p>
+
+<h2 id="一-安装docker">一.安装docker</h2>
+
+<p>目前手头只有两种测试环境。</p>
+
+<ul>
+<li><p>mac安装 docker</p>
+
+<pre><code>brew cask install docker
+</code></pre></li>
+
+<li><p>(树莓派)debain安装docker</p>
+
+<pre><code>//脚本安装最新版本
+wget -qO- https://get.docker.com/ | sh
+</code></pre></li>
+</ul>
+
+<h2 id="二-基本概念">二.基本概念</h2>
+
+<ul>
+<li><p>镜像</p>
+
+<p>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p></li>
+
+<li><p>容器</p>
+
+<p>容器是镜像运行时的实体。</p></li>
+
+<li><p>仓库</p>
+
+<p>一个集中的存储、分发镜像的服务，Docker Registry 支持共有和私有。</p></li>
+</ul>
+
+<h2 id="三-操作容器和镜像">三.操作容器和镜像</h2>
+
+<ul>
+<li><p>docker版本</p>
+
+<pre><code>docker version
+</code></pre></li>
+
+<li><p>列出镜像</p>
+
+<pre><code>docker images 
+</code></pre></li>
+
+<li><p>拉取镜像</p>
+
+<pre><code>docker  pull ubuntu //拉取ubuntu 最新版本
+</code></pre></li>
+
+<li><p>删除镜像</p>
+
+<pre><code>docker rmi ubuntu
+</code></pre></li>
+
+<li><p>运行容器</p>
+
+<pre><code>docker run -i -t ubuntu /bin/bash
+
+参数说明: 
+  -i 保证容器中的STDIN是开启的
+  -t 分配一个伪tty终端
+</code></pre></li>
+
+<li><p>容器命名</p>
+
+<pre><code>docker run --name ubuntu170210 -i -t ubuntu  /bin/bash
+</code></pre></li>
+
+<li><p>重新启动已经停止的容器</p>
+
+<pre><code>docker start ubuntu
+</code></pre></li>
+
+<li><p>附着在容器上</p>
+
+<pre><code>docker attach ubuntu
+</code></pre></li>
+
+<li><p>创建守护式容器</p>
+
+<pre><code>docker run --name ubuntu170210 -d ubuntu /bin/sh -c &quot;while  true;do echo hello world;sleep 1;done&quot;
+</code></pre></li>
+
+<li><p>停止守护式进程</p>
+
+<pre><code>docker stop ubuntu
+</code></pre></li>
+
+<li><p>自动重启容器</p>
+
+<pre><code>docker run --restart=always --name ubuntu170210 -d ubuntu /bin/sh -c &quot;while  true;do echo hello world;sleep 1;done&quot;
+参数说明
+--restart=always  无论容器退出代码是什么,docker都会重启该容器
+--restart=on-failure:5 如果退出代码非0是，才自动重启。5为自动重启次数，最多重启5次
+</code></pre></li>
+
+<li><p>容器日志</p>
+
+<pre><code>docker logs ubuntu
+</code></pre></li>
+
+<li><p>查看容器进程</p>
+
+<pre><code>docker top ubuntu
+</code></pre></li>
+
+<li><p>在容器内部运行进程</p>
+
+<pre><code>docker exec -d ubuntu touch /opt/test
+参数说明: 
+    -d 表明要在后台运行一个后台进程
+</code></pre></li>
+
+<li><p>查看容器更多信息</p>
+
+<pre><code>docker inspect ubuntu
+docker inspect ubuntu --format='{{.Name}} {{.State.Running}}'
+参数说明: 
+    --format 支持go语言模版，可以通过模版获取参数值
+</code></pre></li>
+
+<li><p>查看容器信息（ps）</p>
+
+<pre><code>docker ps命令可以查看容器的CONTAINER ID、NAME、IMAGE NAME、端口开启及绑定、容器启动后执行的COMMNAD。经常通过ps来找到CONTAINER_ID。
+docker ps 默认显示当前正在运行中的container
+docker ps -a 查看包括已经停止的所有容器
+docker ps -l 显示最新启动的一个容器（包括已停止的）
+</code></pre></li>
+
+<li><p>删除容器</p>
+
+<pre><code>docker rm ubuntu
+</code></pre></li>
+
+<li><p>删除所有停止的容器</p>
+
+<pre><code>docker rm $(docker ps -a -q)
+</code></pre></li>
+
+<li><p>查看镜像构建过程</p>
+
+<pre><code>docker history ubuntu
+</code></pre></li>
+
+<li><p>容器的导入和导出</p>
+
+<pre><code>docker export 容器id &gt; ubuntu.tar
+cat ubuntu.tar | docker import - test/ubuntu:v1.0
+docker import http://nanjishidu.me/ubuntu.tar test/ubuntu //指定url来导入
+</code></pre></li>
+</ul>
+
+<h2 id="四-编写dockerfile">四.编写Dockerfile</h2>
+
+<p>注意：简化RUN执行的次数。每一个指令都会建立一层镜像并把运行时不需要的东西装入镜像，如编译环境，更新数据包等。编写dockerfile 不是在写 shell,通过 &amp;&amp; 进行指令合并,减少构建层数
++ 镜像构建</p>
+
+<pre><code>    docker build [选项] &lt;上下文路径/URL/-&gt;
+</code></pre>
+
+<ul>
+<li>FROM指定基础镜像</li>
+
+<li><p>RUN执行命令</p>
+
+<p>分为两种</p>
+
+<pre><code>shell格式: RUN &lt;命令&gt; 
+exec格式: RUN [&quot;可执行文件&quot;,&quot;参数1&quot;,&quot;参数2&quot;] 
+</code></pre></li>
+
+<li><p>CMD命令</p>
+
+<p>指定容器启动时要运行的命令。</p></li>
+
+<li><p>ENTRYPOINT命令</p>
+
+<p>与CMD命令类似。docker run命令会覆盖cmd指令，而 ENTRYPOINT 指令 不容易被覆盖。</p></li>
+
+<li><p>COPY命令</p>
+
+<p>格式</p>
+
+<pre><code>COPY &lt;源路径&gt;...&lt;目标路径&gt;
+COPY [&quot;&lt;源路径&gt;&quot;,...&quot;&lt;目标路径&gt;&quot;]
+</code></pre></li>
+
+<li><p>EXPOSE</p>
+
+<p>生命运行时容器提供服务的端口。</p></li>
+
+<li><p>WORKDIR</p>
+
+<p>指定工作目录，可以通过-w参数在运行时覆盖工作目录</p>
+
+<pre><code>docker run -ti -w /var/log ubuntu pwd
+</code></pre></li>
+
+<li><p>ENV</p>
+
+<p>镜像构建过程中设定环境变量</p>
+
+<pre><code>ENV GOPATH /opt/environment
+</code></pre>
+
+<p>同时可以用-e标志传递环境变量</p>
+
+<pre><code>docker run -ti -e &quot;GOPATH=/opt/environment2&quot; ubuntu env
+</code></pre></li>
+
+<li><p>USER</p>
+
+<p>指定镜像以什么用户去执行。docker run命令可以通过-u覆盖指令设定值。默认用户为root</p>
+
+<pre><code>USER nginx //设定容器以nginx用户执行
+//其他表现形式
+USER user:group
+USER uid
+USER uid:gid
+USER user:gid
+USER uid:group
+USER user
+</code></pre></li>
+
+<li><p>VOLUME</p>
+
+<p>基于镜像给创建的容器添加卷，一个卷可以存在于一个或者多个容器内的特定目录。</p>
+
+<p>通过-v参数指定卷的源目录和容器里的目的目录。两个目录通过:分割。如果目的目录不存在，docker自动创建一个。
+在目的目录后添加rw或ro指定目的目录的读写状态</p>
+
+<pre><code>docker run -d -p 80 --name website -v $PWD/website:/var/www/html/website:ro jamtur01/nginx nginx
+</code></pre></li>
+
+<li><p>ADD</p>
+
+<p>将构建环境下的文件和目录复制到镜像中。ADD 命令使得构建缓存无效。添加文件还活着目录后，后续指令不能使用构建缓存。</p>
+
+<pre><code>ADD /etc/sshd.conf /etc/sshd.conf 
+ADD http://nanjishidu.me/golang.tar.gz /opt/environment/golang.tar.gz //支持url
+ADD golang.tar.gz /opt/environment/ 如果为合法归档文件的源文件，会自动解压。如果已经存在的文件和目录不会被覆盖。
+</code></pre></li>
+
+<li><p>ONBUILD</p>
+
+<p>为镜像添加触发器。当镜像被用作其他镜像的基础镜像时，镜像中的触发器将会被执行。</p>
+
+<pre><code>ONBUILD ADD  . /app/src
+ONBUILD RUN cd /app/src &amp;&amp; make
+</code></pre>
+
+<h2 id="五-数据卷">五.数据卷</h2></li>
+
+<li><p>数据卷(在mac下提示手动添加共享目录)</p>
+
+<pre><code>docker run -it -P --name web -v /opt/tmp:/opt/tmp:rw ubuntu 
+</code></pre>
+
+<h2 id="六-使用网络">六.使用网络</h2>
+
+<h3 id="端口映射">端口映射</h3></li>
+
+<li><p>映射所有接口地址</p>
+
+<p>使用 hostPort:containerPort 格式本地的 5000 端口映射到容器的 5000 端口，可以执行</p>
+
+<pre><code>$ sudo docker run -d -p 5000:5000 training/webapp python app.py
+</code></pre>
+
+<p>此时默认会绑定本地所有接口上的所有地址。</p></li>
+
+<li><p>映射到指定地址的指定端口</p>
+
+<p>可以使用 ip:hostPort:containerPort 格式指定映射使用一个特定地址，比如 localhost 地址 127.0.0.1</p>
+
+<pre><code>$ sudo docker run -d -p 127.0.0.1:5000:5000 training/webapp python app.py
+</code></pre></li>
+
+<li><p>映射到指定地址的任意端口</p>
+
+<p>使用 ip::containerPort 绑定 localhost 的任意端口到容器的 5000 端口，本地主机会自动分配一个端口。</p>
+
+<pre><code>$ sudo docker run -d -p 127.0.0.1::5000 training/webapp python app.py
+</code></pre>
+
+<p>还可以使用 udp 标记来指定 udp 端口</p>
+
+<pre><code>$ sudo docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
+</code></pre></li>
+
+<li><p>查看映射端口配置</p>
+
+<p>使用 docker port 来查看当前映射的端口配置，也可以查看到绑定的地址</p>
+
+<pre><code>$ docker port nostalgic_morse 5000
+127.0.0.1:49155.
+</code></pre>
+
+<p>注意：</p>
+
+<p>容器有自己的内部网络和 ip 地址（使用 docker inspect 可以获取所有的变量，Docker 还可以有一个可变的网络配置。）
+-p 标记可以多次使用来绑定多个端口
+例如</p>
+
+<pre><code>$ sudo docker run -d -p 5000:5000  -p 3000:80 training/webapp python app.py
+</code></pre>
+
+<h3 id="容器互联">容器互联</h3>
+
+<p>&ndash;link 参数让容器之间安全的进行交互。</p>
+
+<p>Docker 在两个互联的容器之间创建了一个安全隧道，而且不用映射它们的端口到宿主主机上。在启动 db 容器的时候并没有使用 -p 和 -P 标记，从而避免了暴露数据库端口到外部网络上。</p>
+
+<p>1.首先创建一个数据库容器</p>
+
+<pre><code>docker run -d --name db 
+</code></pre>
+
+<p>2.然后创建一个新的web容器，并将它连接到db容器</p>
+
+<pre><code>docker run -d -P --name web --link db:db training/webapp python app.py
+</code></pre>
+
+<p>Docker 通过 2 种方式为容器公开连接信息：</p>
+
+<ul>
+<li>环境变量</li>
+<li>更新 /etc/hosts 文件</li>
+</ul></li>
+</ul>
+
+<h2 id="2017-07-20-追加">2017-07-20 追加</h2>
+
+<ul>
+<li><p>上传镜像到私有库</p>
+
+<pre><code>docker tag 7328f6f8b418 127.0.0.1:5000/alpine
+docker push 127.0.0.1:5000/alpine
+docker pull 127.0.0.1:5000/alpine
+</code></pre></li>
+</ul>
+
+<h2 id="2017-07-25-追加">2017-07-25 追加</h2>
+
+<p><strong>In docker for mac</strong></p>
+
+<p>If you can remove all images/containers then:</p>
+
+<p>Stop Docker.</p>
+
+<pre><code>docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls |awk '{print $2}')
+rm -rf ~/Library/Containers/com.docker.docker/Data/*
+</code></pre>
+
+<p>Start Docker, you have yours GB back.</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/docker.html">docker</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/02/gophper-nginx-fancy.html" data-tooltip="[gophper]nginx添加FancyIndex插件美化目录索引">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/01/kafka.html" data-tooltip="学习kafka">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/02/gophper-nginx-fancy.html" data-tooltip="[gophper]nginx添加FancyIndex插件美化目录索引">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/01/kafka.html" data-tooltip="学习kafka">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2017\/02\/docker-run.html';
+          
+            this.page.identifier = '\/2017\/02\/docker-run.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

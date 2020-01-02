@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instagram on nanjishidu</title>
+    <link>https://gophper.com/categories/instagram.html</link>
+    <description>Recent content in Instagram on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/instagram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>备份instagram照片</title>
+      <link>https://gophper.com/2016/12/instagram.html</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/12/instagram.html</guid>
+      <description>&lt;p&gt;使用ins做日常的图片分享,但是ins不支持图片下载。搜索过全量备份软件,需要捐助才可以使用。最近刚好写过网站数据采集的代码,使用过PhantomJS(node),goquery(golang)等第三方包,因此自己动手实现了insta。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

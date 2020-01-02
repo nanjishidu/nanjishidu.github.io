@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on nanjishidu</title>
+    <link>https://gophper.com/categories/mac.html</link>
+    <description>Recent content in Mac on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac终端环境Iterm2 zsh oh-my-zsh screen</title>
+      <link>https://gophper.com/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</guid>
+      <description>&lt;p&gt;以前在mac环境下只使用默认终端工具，最近接触zsh和oh-my-zsh感觉功能挺强大，特此记录。同时对常用的screen命令进行简要介绍。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac常用命令</title>
+      <link>https://gophper.com/2017/03/mac-shell.html</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/mac-shell.html</guid>
+      <description>&lt;p&gt;使用mac两年多了，前两天看到同事使用了pdcopy和pbpaste觉得很好用，将常用的几个命令做下记录。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac使用过程小技巧</title>
+      <link>https://gophper.com/2015/08/mac-skill.html</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/08/mac-skill.html</guid>
+      <description>&lt;p&gt;mac下清除文件扩展属性,清除系统睡眠文件。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac配置初始化部署</title>
+      <link>https://gophper.com/2015/03/mac-init.html</link>
+      <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/03/mac-init.html</guid>
+      <description>&lt;p&gt;记录mac系统初始化安装过程。安装xcode，brew，go环境，php环境。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

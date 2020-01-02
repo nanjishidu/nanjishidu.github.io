@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux/Unix on nanjishidu</title>
+    <link>https://gophper.com/categories/linux/unix.html</link>
+    <description>Recent content in Linux/Unix on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/linux/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>snmpwalk使用</title>
+      <link>https://gophper.com/2014/10/linux-snmpwalk.html</link>
+      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2014/10/linux-snmpwalk.html</guid>
+      <description>&lt;p&gt;使用snmpwalk查看支持SNMP协议的设备的一些信息，如cisco交换机或路由器IP地址等，也可用来协助开发SNMP功能。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux下FTP上传下载</title>
+      <link>https://gophper.com/2014/06/linux-ftp.html</link>
+      <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2014/06/linux-ftp.html</guid>
+      <description>&lt;p&gt;lftp实现文件上传下载。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux配置crontab</title>
+      <link>https://gophper.com/2014/04/linux-crontab.html</link>
+      <pubDate>Sat, 19 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2014/04/linux-crontab.html</guid>
+      <description>&lt;p&gt;crontab 执行定时任务。
+目前自己的应用部署在阿里云服务器和树莓派服务器上。
+重要的资料通过crontab调用脚本，每天定时备份到七牛云私密空间备份成功后删除七牛空间7天前的数据。保证数据的安全和七牛空间的持续可用。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用arp拦截网络攻击</title>
+      <link>https://gophper.com/2014/04/arp-protection.html</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2014/04/arp-protection.html</guid>
+      <description>&lt;p&gt;局域网内设备发送arp病毒包，误导设备对网关mac地址的解析。通过arp绑定mac地址。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

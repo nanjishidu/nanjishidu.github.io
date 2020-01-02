@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。">
+
+
+<meta property="og:description" content="最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派使用备忘">
+<meta name="twitter:title" content="树莓派使用备忘">
+<meta property="og:url" content="https://nanjishidu.me/2016/11/raspberry-init.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2016/11/raspberry-init.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。">
+<meta name="twitter:description" content="最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2016-11-17T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2016-11-17T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="raspberry">
+    
+      <meta property="article:tag" content="debian">
+    
+      <meta property="article:tag" content="autossh">
+    
+      <meta property="article:tag" content="ssh隧道">
+    
+      <meta property="article:tag" content="crontab">
+    
+      <meta property="article:tag" content="软件源">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2016/1117.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2016/1117.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>树莓派使用备忘</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2016/11/raspberry-init.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      树莓派使用备忘
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2016-11-17T00:00:00Z">
+        
+  November 17, 2016
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。</p>
+
+<h2 id="系统安装-mac-烧录tf卡">系统安装(MAC 烧录TF卡)</h2>
+
+<pre><code>sudo dd if=2016-09-23-raspbian-jessie-lite.img of=/dev/rdisk2 bs=1m
+</code></pre>
+
+<h2 id="串口支持-2016-09-23版本">串口支持(2016-09-23版本)</h2>
+
+<pre><code>echo &quot;dtoverlay=pi3-miniuart-bt&quot; &gt;&gt;/boot/config.txt
+</code></pre>
+
+<h2 id="修改源">修改源</h2>
+
+<pre><code>cp /etc/apt/sources.list /etc/apt/sources.list.bak
+vi /etc/apt/sources.list
+</code></pre>
+
+<p>添加</p>
+
+<pre><code>deb http://mirrors.aliyun.com/raspbian/raspbian/ jessie main non-free contrib rpi
+deb-src http://mirrors.aliyun.com/raspbian/raspbian/ jessie main non-free contrib rpi
+</code></pre>
+
+<p>修改后执行</p>
+
+<pre><code>apt update
+apt upgrade
+</code></pre>
+
+<h2 id="配置ssh">配置SSH</h2>
+
+<p>修改/etc/ssh/ssd-config将</p>
+
+<pre><code>PermitRootLogin without-password
+</code></pre>
+
+<p>为</p>
+
+<pre><code>PermitRootLogin yes 
+</code></pre>
+
+<p>支持root 权限登录</p>
+
+<p>如果需要无密免登录</p>
+
+<pre><code>ssh-keygen -t rsa
+</code></pre>
+
+<p>生成rsa和rsa.pub，拷贝rsa.pub到远程服务器</p>
+
+<pre><code>cat rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre>
+
+<h2 id="添加autossh支持">添加autossh支持</h2>
+
+<pre><code>apt install autossh
+</code></pre>
+
+<h2 id="添加ssh隧道支持">添加ssh隧道支持</h2>
+
+<p>ssh隧道功能，可以实现一些代理功能或者是穿透内网功能</p>
+
+<p>安装autossh后</p>
+
+<pre><code>vi /opt/bin/sshd.sh
+</code></pre>
+
+<p>添加</p>
+
+<pre><code>#!/bin/sh
+autossh -M 5678 -C -N -g -o TCPKeepAlive=yes -o ServerAliveInterval=60 -o ServerAliveCountMax=1 -R 8080:127.0.0.1:80 root@gophper.com &amp;
+</code></pre>
+
+<p>设置远程服务器监听8080端口代理树莓派80端口</p>
+
+<p>参数说明</p>
+
+<p>-g Allow remote hosts to connect to forwarded ports.</p>
+
+<p>在-L/-R/-D参数中，允许远程主机连接到建立的转发的端口，如果不加这个参数，只允许本地主机建立连接。只是对本地转发有效，要使远程转发也使用外部ip，必须修改远程主机上的sshd_config，增加</p>
+
+<pre><code>GatewayPorts yes
+</code></pre>
+
+<p>-L port:host:hostport</p>
+
+<p>将本地机(客户机)的某个端口转发到远端指定机器的指定端口.</p>
+
+<pre><code>ssh -C -f -N -g -L listen_port:DST_Host:DST_port user@Tunnel_Host
+</code></pre>
+
+<p>-R port:host:hostport</p>
+
+<p>将远程主机(服务器)的某个端口转发到本地端指定机器的指定端口.</p>
+
+<pre><code>ssh -C -f -N -g -R listen_port:DST_Host:DST_port user@Tunnel_Host
+</code></pre>
+
+<p>-D port</p>
+
+<p>指定一个本地机器 “动态的’’ 应用程序端口转发.</p>
+
+<pre><code>ssh -N -f -D 8000 登录名@我的vps的ip
+</code></pre>
+
+<p>就相当与在本机上开了一个sock代理，端口是8000，给浏览器挂上127.0.0.1:8000的代理，查一下本机ip，发现已经变成vps的ip了。</p>
+
+<p>-C Enable compression.</p>
+
+<p>压缩数据传输。</p>
+
+<p>-f Fork into background after authentication.</p>
+
+<p>后台认证用户/密码，通常和-N连用，不用登录到远程主机。</p>
+
+<p>-N Do not execute a shell or command.</p>
+
+<p>不执行脚本或命令，通常与-f连用。</p>
+
+<p>-p port Connect to this port. Server must be on the same port.</p>
+
+<p>被登录的ssd服务器的sshd服务端口，省略就是默认的22端口。</p>
+
+<h2 id="添加crontab监听脚本">添加crontab监听脚本</h2>
+
+<pre><code>vi /opt/bin/monitor.sh
+</code></pre>
+
+<p>添加</p>
+
+<pre><code>#/bin/sh
+ssh=`ps awx|grep &quot;autossh&quot;|grep -v grep`
+if [ &quot;$ssh&quot; = &quot;&quot; ];then
+       echo &quot;`date '+%Y-%m-%d %H:%M:%S'` ssh is not exist,running...&quot;
+       /opt/bin/sshd.sh &amp;
+fi
+</code></pre>
+
+<p>修改 /etc/crontab添加autossh</p>
+
+<pre><code>	*  *    * * *   root    /opt/bin/monitor.sh&gt;&gt;/opt/bin/monitor.log
+</code></pre>
+
+<h2 id="添加ssh公钥实现git免密">添加SSH公钥实现git免密</h2>
+
+<pre><code>ssh-keygen -t rsa -C &quot;email邮箱&quot; -f id_rsa.mayun
+ssh-keygen -t rsa -C &quot;email邮箱&quot; -f id_rsa.github
+</code></pre>
+
+<p>将 id_rsa.mayun.pub 添加码云ssh
+将 id_rsa.github.pub 添加github ssh</p>
+
+<p>因为创建了多个SSH公钥,需要config配置文件</p>
+
+<pre><code>vi  ~/.ssh/config
+	
+Host git.oschina.net
+    HostName git.oschina.net
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa.mayun
+Host nanjishidu.github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa.github
+</code></pre>
+
+<p>验证是否添加成功</p>
+
+<pre><code>ssh -T git@git.oschina.net
+ssh git@github.com
+</code></pre>
+
+<p>成功后发现每次提交时还是需要输入密码</p>
+
+<pre><code>git clone 重新拉取使用ssh链接,不使用默认的git链接。。。
+</code></pre>
+
+<h2 id="树莓派ap">树莓派AP</h2>
+
+<ul>
+<li>安装hostapd和dnsmasq,dnsmasq用于管理dns和dhcp。hostapd提供基于Linux的无线接入点强WPA2加密和身份认证。</li>
+</ul>
+
+<p>执行</p>
+
+<pre><code>apt-get install dnsmasq
+apt-get install hostapd
+</code></pre>
+
+<ul>
+<li><p>将无线网口wlan0 设置为静态地址，以太网eth0接入因特网。系统默认DHCPCD配置网络接口。</p>
+
+<pre><code>vi /etc/dhcpcd.conf
+</code></pre></li>
+</ul>
+
+<p>添加</p>
+
+<pre><code>interface wlan0  
+static ip_address=10.10.0.1/24
+</code></pre>
+
+<ul>
+<li><p>为防止wpa_supplicant的影响和干扰</p>
+
+<pre><code>vi /etc/network/interfaces
+</code></pre></li>
+</ul>
+
+<p>将wpa-conf注释</p>
+
+<pre><code>allow-hotplug wlan0
+iface wlan0 inet manual
+#wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+
+<p>执行</p>
+
+<pre><code>service dhcpcd restart
+</code></pre>
+
+<ul>
+<li><p>配置HOSTAPD</p>
+
+<pre><code>vi /etc/hostapd/hostapd.conf
+</code></pre></li>
+</ul>
+
+<p>添加</p>
+
+<pre><code>interface=wlan0
+driver=nl80211
+#ssid蜜渍
+ssid=gophper
+hw_mode=g
+channel=6
+wmm_enabled=1
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+#加密方式
+wpa=2
+#密码
+wpa_passphrase=1234876500
+wpa_key_mgmt=WPA-PSK
+rsn_pairwise=CCMP
+</code></pre>
+
+<p>执行</p>
+
+<pre><code>/usr/sbin/hostapd /etc/hostapd/hostapd.conf
+</code></pre>
+
+<p>如果可以搜索到表示成功,添加系统自启动hostapd</p>
+
+<pre><code>vi /etc/default/hostapd
+</code></pre>
+
+<p>修改</p>
+
+<pre><code>#DAEMON_CONF=&quot;&quot;
+</code></pre>
+
+<p>为</p>
+
+<pre><code>DAEMON_CONF=&quot;/etc/hostapd/hostapd.conf&quot;
+</code></pre>
+
+<ul>
+<li>配置DNSMASQ为了实现上网功能，需要对DNSMASQ服务进行配置，</li>
+</ul>
+
+<p>首先备份一下系统默认的文件，然后创建一个新的配置文件。</p>
+
+<pre><code>mv /etc/dnsmasq.conf /etc/dnsmasq.conf.bak
+vi /etc/dnsmasq.conf
+</code></pre>
+
+<p>具体的配置信息如下所示：</p>
+
+<pre><code>interface=wlan0
+bind-interfaces
+server=8.8.8.8
+domain-needed
+bogus-priv
+dhcp-range=10.10.0.2,10.10.0.254,12h
+</code></pre>
+
+<ul>
+<li><p>设置ipv4 转发</p>
+
+<pre><code>vi /etc/sysctl.conf
+</code></pre></li>
+</ul>
+
+<p>修改</p>
+
+<pre><code>net.ipv4.ip_forward=1
+</code></pre>
+
+<p>下一次重启后会生效，如果不想现在重启，可以直接输入如下指令直接生效。</p>
+
+<pre><code>echo 1 &gt;/proc/sys/net/ipv4/ip_forward
+</code></pre>
+
+<ul>
+<li>配置iptables防火墙</li>
+</ul>
+
+<p>为了实现PI3以太网接口共享给wlan0上网，需要配置NAT，需先执行如下防火墙命令</p>
+
+<pre><code>iptables -t nat -APOSTROUTING -o eth0 -j MASQUERADE  
+iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -j ACCEPT  
+iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+</code></pre>
+
+<p>保存规则</p>
+
+<pre><code>iptables-save&gt; /etc/iptables.rules
+</code></pre>
+
+<pre><code>创建文件，添加以下内容，使防火墙开机启动
+</code></pre>
+
+<pre><code>vi /etc/network/if-pre-up.d/iptables 
+</code></pre>
+
+<p>添加</p>
+
+<pre><code>#!/bin/bash
+/sbin/iptables-restore &lt; /etc/iptables.rules
+</code></pre>
+
+<p>添加执行权限</p>
+
+<pre><code>chmod +x /etc/network/if-pre-up.d/iptables
+</code></pre>
+
+<ul>
+<li><p>最后需要重启服务,重启系统</p>
+
+<pre><code>service hostapd start
+service dnsmasq start
+reboot
+</code></pre></li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/raspberry.html">raspberry</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/debian.html">debian</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/autossh.html">autossh</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/ssh%E9%9A%A7%E9%81%93.html">ssh隧道</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/crontab.html">crontab</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/%E8%BD%AF%E4%BB%B6%E6%BA%90.html">软件源</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2016/12/rsync-ssh.html" data-tooltip="rsync同步">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2016/11/gophper-aliyun-fault.html" data-tooltip="[gophper]阿里云服务器异常排查">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2016/12/rsync-ssh.html" data-tooltip="rsync同步">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2016/11/gophper-aliyun-fault.html" data-tooltip="[gophper]阿里云服务器异常排查">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2016\/11\/raspberry-init.html';
+          
+            this.page.identifier = '\/2016\/11\/raspberry-init.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

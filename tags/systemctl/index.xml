@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>systemctl on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/systemctl.html</link>
+    <description>Recent content in systemctl on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/systemctl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[gophper]centos7系统的改变</title>
+      <link>https://nanjishidu.me/2017/01/gophper-centos7.html</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/01/gophper-centos7.html</guid>
+      <description>&lt;p&gt;阿里云推出免费试用6个月的活动,申请了免费试用,切换到centos7后发现了一些改变。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

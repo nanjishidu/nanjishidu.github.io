@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="最近业务需求需要通过golang生成二维码,研究了github.com/boombuler/barcode,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。">
+
+
+<meta property="og:description" content="最近业务需求需要通过golang生成二维码,研究了github.com/boombuler/barcode,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="golang生成二维码及相关条码介绍">
+<meta name="twitter:title" content="golang生成二维码及相关条码介绍">
+<meta property="og:url" content="https://nanjishidu.me/2017/03/golang-qr-code39-code128.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2017/03/golang-qr-code39-code128.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="最近业务需求需要通过golang生成二维码,研究了github.com/boombuler/barcode,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。">
+<meta name="twitter:description" content="最近业务需求需要通过golang生成二维码,研究了github.com/boombuler/barcode,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-03-11T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-03-11T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="golang">
+    
+      <meta property="article:tag" content="二维码">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2017/0311.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2017/0311.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>golang生成二维码及相关条码介绍</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2017/03/golang-qr-code39-code128.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      golang生成二维码及相关条码介绍
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-03-11T00:00:00Z">
+        
+  March 11, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>最近业务需求需要通过golang生成二维码,研究了<a href="https://github.com/boombuler/barcode" target="_blank">github.com/boombuler/barcode</a>,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。</p>
+
+<h2 id="一-qr码">一.QR码</h2>
+
+<p>QR码（全称为快速响应矩阵码；英语：Quick Response Code）是二维条码的一种，于1994年由日本DENSO WAVE公司发明。</p>
+
+<p>QR来自英文Quick Response的缩写，即快速反应，因为发明者希望QR码可以让其内容快速被解码。</p>
+
+<p>QR码使用四种标准化编码模式（数字，字母数字，字节（二进制）和汉字）来存储数据。</p>
+
+<p>QR码最常见于日本，为目前日本最流行的二维空间条码。</p>
+
+<p>QR码比较普通条码可以存储更多数据，也无需要像普通条码般在扫描时需要直线对准扫描仪。因此其应用范围已经扩展到包括产品跟踪，物品识别，文档管理，营销等方面。</p>
+
+<h2 id="二-codabar-条码">二.Codabar 条码</h2>
+
+<p>Codabar是由Monarch Marking Systems在1972年研制的条码。它是在&rdquo;2 of 5&rdquo;后早期阶段引入的条码。广泛用于需要序列号的领域，</p>
+
+<p>如血库、门到门交货服务订单以及会员卡片管理。</p>
+
+<h2 id="三-data-matrix码">三.Data Matrix码</h2>
+
+<p>Data Matrix原名Data code，由美国国际资料公司(International Data Matrix, 简称ID Matrix)于1989年发明。</p>
+
+<p>Data Matrix又可分为ECC000-140与ECC200两种类型，ECC000-140具有多种不同等级的错误纠正功能，</p>
+
+<p>而ECC200则透过Reed-Solomon演算法产生多项式计算出错误纠正码，其尺寸可以依需求印成不同大小，但采用的错误纠正码应与尺寸配合，</p>
+
+<p>由于其演算法较为容易，且尺寸较有弹性，故一般以ECC200较为普遍。</p>
+
+<h2 id="四-ean码">四.EAN码</h2>
+
+<p>EAN码是国际物品编码协会制定的一种商品用条码，通用于全世界。EAN码符号有标准版（EAN-13）和缩短版（EAN-8）两种。
+标准版表示13位数字，又称为EAN13码，缩短版表示8位数字，又称EAN8。两种条码的最后一位为校验位，由前面的12位或7位数字计算得出</p>
+
+<h2 id="五-aztec码">五.aztec码</h2>
+
+<p>Aztec是一种高容量的二维条形格式。她可以对ASCII和扩展ASCII码进行编码。</p>
+
+<p>当使用最高容量和25%的纠错级別的時候， Aztec可以对3000个字符或者3750个数字进行编码。</p>
+
+<p>Aztec的矩阵大小在15 X 15和151 X 151之间变化。每个最小单位非黑即白。</p>
+
+<p>她独特的位于正中的模式识别标志和安置算法使Aztec看起來像个漩涡一样</p>
+
+<h2 id="六-交叉25码-interleaved-2-of-5">六.交叉25码（Interleaved 2 of 5）</h2>
+
+<p>条码生成，常用于物流管理，字符集仅为数字且个数为偶数,为奇数将自动在前面加&rdquo;0&rdquo;。</p>
+
+<h2 id="七-code39">七.code39</h2>
+
+<p>CODE 39码的编码规则是：</p>
+
+<p>1.每五条线表示一个字符；</p>
+
+<p>2.粗线表示１，细线表示０；</p>
+
+<p>3.线条间的间隙宽的表示１，窄的表示０；</p>
+
+<p>4.五条线加上它们之间的四条间隙就是九位二进制编码，而且这九位中必定有三位是1，所以称为39码；</p>
+
+<p>5.条形码的首尾各一个＊标识开始和结束</p>
+
+<h2 id="八-code128">八.code128</h2>
+
+<p>CODE128是一种高效率条码. 它一共映射了106种编码, 每种编码针对不同版本的CODE128(CODE128A, CODE128B, CODE128C), 代表了不同的数据组合.</p>
+
+<p>同时, 每种编码通过11个黑白条模块的组合实现. 终止符比较特殊,由13个模块组成.</p>
+
+<p>CODE128码是广泛应用在企业内部管理、生产流程、物流控制系统方面的条码码制，由于其优良的特性在管理信息系统的设计中被广泛使用，CODE128码是应用最广泛的条码码制之一。</p>
+
+<p>CODE128码是1981年引入的一种高密度条码，CODE128 码可表示从 ASCII 0 到ASCII 127 共128个字符，故称128码。其中包含了数字、字母和符号字符；</p>
+
+<p>CODE 128 码的特点：</p>
+
+<p>1.可表示高密度数据和字符串；</p>
+
+<p>2.每个字符由3个条、3个空、11个单元构成，字符串可变长；</p>
+
+<p>3.符号内含校验码；</p>
+
+<p>4.有三种不同的版本：A（数字、大写字母、控制字符）B（数字、大小字母、字符）C（双位数字）</p>
+
+<ul>
+<li>CODE128A: 标准数字和字母, 控制符, 特殊字符</li>
+<li>CODE128B: 标准数字和字母, 小写字母, 特殊字符</li>
+<li>CODE128C: [00]-[99]的数字对集合, 共100个
+<br /></li>
+</ul>
+
+<p>5.可用128个字符分别在A、B或C三个字符串集合中。</p>
+
+<h3 id="1-code128-码与code39码的区别">1.CODE128 码与CODE39码的区别：</h3>
+
+<p>Code 128码与Code 39码有很多的相近性，都广泛运用在企业内部管理、生产流程、物流控制系统方面。</p>
+
+<p>不同的在于Code 128比Code 39能表现更多的字符，单位长度里的编码密度更高。</p>
+
+<p>当单位长度里不能容下Code 39编码或编码字符超出了Code 39的限制时，就可选择Code 128来编码。所以Code 128比Code 39更具灵性。</p>
+
+<h3 id="2-为什么广泛使用code128码">2.为什么广泛使用CODE128码：</h3>
+
+<p>由于CODE128码可表示较全面的字符（数字、字母和符号）,在同样长度的条码中可容纳的字符长度较长（高密度）,条码长度与字符串长度无明显的敏感性，所以CODE128码是企业内部管理系统最为广泛使用的条码码制。</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/golang.html">golang</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81.html">二维码</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/mac-shell.html" data-tooltip="mac常用命令">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html" data-tooltip="[gophper]nginx添加密码访问">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/mac-shell.html" data-tooltip="mac常用命令">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html" data-tooltip="[gophper]nginx添加密码访问">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2017\/03\/golang-qr-code39-code128.html';
+          
+            this.page.identifier = '\/2017\/03\/golang-qr-code39-code128.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sexlinux on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/sexlinux.html</link>
+    <description>Recent content in sexlinux on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/sexlinux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[gophper]centos关闭selinux</title>
+      <link>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</guid>
+      <description>&lt;p&gt;centos selinux默认是启用状态。selinux可能会影响服务器服务，如php，建议关闭。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

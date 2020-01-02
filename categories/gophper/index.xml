@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gophper on nanjishidu</title>
+    <link>https://gophper.com/categories/gophper.html</link>
+    <description>Recent content in Gophper on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/gophper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[gophper]centos关闭selinux</title>
+      <link>https://gophper.com/2017/04/gophper-centos-selinux.html</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/gophper-centos-selinux.html</guid>
+      <description>&lt;p&gt;centos selinux默认是启用状态。selinux可能会影响服务器服务，如php，建议关闭。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]服务器新旅程(virmach-vps-bbr)</title>
+      <link>https://gophper.com/2017/04/gophper-virmach-vps-bbr.html</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/gophper-virmach-vps-bbr.html</guid>
+      <description>&lt;p&gt;谷歌开源TCP BBR拥塞控制算法,并提交了linux内核,最新的 4.10 版内核已经用上了该算法。部署后测试后，网速提升了很多。采用virmach西雅图机房服务器进行测试,部署centos7。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx模块实现追加和修改响应内容</title>
+      <link>https://gophper.com/2017/04/gophper-nginx-ngx_http_addition_module-ngx_http_sub_module.html</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/04/gophper-nginx-ngx_http_addition_module-ngx_http_sub_module.html</guid>
+      <description>&lt;p&gt;ngx_http_addition_module在响应之前或者之后追加文本内容,ngx_http_sub_module模块是一个过滤器，它修改网站响应内容中的字符串。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx添加密码访问</title>
+      <link>https://gophper.com/2017/02/gophper-nginx-htpasswd.html</link>
+      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/02/gophper-nginx-htpasswd.html</guid>
+      <description>&lt;p&gt;nginx通过 auth_basic和auth_basic_user_file配置密码保护。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx添加FancyIndex插件美化目录索引</title>
+      <link>https://gophper.com/2017/02/gophper-nginx-fancy.html</link>
+      <pubDate>Sun, 19 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/02/gophper-nginx-fancy.html</guid>
+      <description>&lt;p&gt;配置域名&lt;a href=&#34;http://book.gophper.com&#34; target=&#34;_blank&#34;&gt;book.gophper.com&lt;/a&gt;,通过ssh隧道借助阿里云服务器实现公网访问。
+在nginx服务器配置目录浏览功能后发现样式不是很友好,需要添加FancyIndex插件,重新编译nginx。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]centos7系统的改变</title>
+      <link>https://gophper.com/2017/01/gophper-centos7.html</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/01/gophper-centos7.html</guid>
+      <description>&lt;p&gt;阿里云推出免费试用6个月的活动,申请了免费试用,切换到centos7后发现了一些改变。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>网站域名gophper.com替换为nanjishidu.me</title>
+      <link>https://gophper.com/2016/12/gophper-nanjishidu.html</link>
+      <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/12/gophper-nanjishidu.html</guid>
+      <description>gophper.com是我的第一个域名，本来是用来做交流网站使用。前一阵开通博客后,手头没有合适的域名，就暂时使用它。
+现在nanjishidu.me已经备案成功，遂将博客域名替换。</description>
+    </item>
+    
+    <item>
+      <title>[gophper]给网站加把小绿锁</title>
+      <link>https://gophper.com/2016/12/gophper-https.html</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/12/gophper-https.html</guid>
+      <description>&lt;p&gt;目前越来越多的网站开始支持https。&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Lets Encrypt&lt;/a&gt;提供免费的ssl证书服务,发现很多同学都在使用。
+最近阅读&lt;a href=&#34;https://undefinedblog.com/lets-encrypt/&#34;&gt;Lets Encrypt花三分钟免费接入ssl证书&lt;/a&gt;,
+发现已经有同学写了脚本进行证书获取，调用python写的acme_tiny。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx日志配置</title>
+      <link>https://gophper.com/2016/12/gophper-nginx-config.html</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/12/gophper-nginx-config.html</guid>
+      <description>&lt;p&gt;谷歌统计因为&lt;strong&gt;某些原因服务不是很友好&lt;/strong&gt;。现在统计分析主要依赖百度统计。。。
+本着学习的态度,对现有日志进行分析统计。
+数据分析可以发现网站自身问题同时可以了解不同地区的访问意向等。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]阿里云服务器异常排查</title>
+      <link>https://gophper.com/2016/11/gophper-aliyun-fault.html</link>
+      <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/11/gophper-aliyun-fault.html</guid>
+      <description>&lt;p&gt;早上通过手机访问博客失败，dig解析域名正常,ssh登录失败，telnet ssh端口正常，ping正常。登录阿里云管理后发现有一封欠费通知。
+此时可视化管理控制端无法打开。。。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]服务器备份脚本</title>
+      <link>https://gophper.com/2015/06/gophper-backup-shell.html</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/06/gophper-backup-shell.html</guid>
+      <description>&lt;p&gt;数据备份在任何时候都要记住,这一点我一直没有意识。&lt;/p&gt;
+
+&lt;p&gt;有一次公司的服务器宕机了，官网无法访问，公司老大通过备份数据恢复保障官网的正常运行。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置svn服务</title>
+      <link>https://gophper.com/2015/06/gophper-svn.html</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/06/gophper-svn.html</guid>
+      <description>&lt;p&gt;centos配置安装svn服务。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置mysql数据库</title>
+      <link>https://gophper.com/2015/06/gophper-mysql.html</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/06/gophper-mysql.html</guid>
+      <description>&lt;p&gt;centos安装配置mysql数据库。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置iptables防火墙</title>
+      <link>https://gophper.com/2015/06/gophper-iptables.html</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2015/06/gophper-iptables.html</guid>
+      <description>&lt;p&gt;阿里云为centos服务器,以下为防火墙规则备份,数据配置在/etc/sysconfig/iptables
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="记录js常用方法">
+
+
+<meta property="og:description" content="记录js常用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js常用速查">
+<meta name="twitter:title" content="js常用速查">
+<meta property="og:url" content="https://nanjishidu.me/2017/10/js.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2017/10/js.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="记录js常用方法">
+<meta name="twitter:description" content="记录js常用方法">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-10-13T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-10-13T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="js">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2017/1013.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2017/1013.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>js常用速查</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2017/10/js.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      js常用速查
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-10-13T00:00:00Z">
+        
+  October 13, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>记录js常用方法</p>
+
+<h3 id="数组">数组</h3>
+
+<pre><code>concat()	连接两个或更多的数组，并返回结果。
+join()	把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+pop()	删除并返回数组的最后一个元素
+push()	向数组的末尾添加一个或更多元素，并返回新的长度。
+reverse()	颠倒数组中元素的顺序。
+shift()	删除并返回数组的第一个元素
+slice()	从某个已有的数组返回选定的元素     
+sort()	对数组的元素进行排序
+splice()	删除元素，并向数组添加新元素。
+toString()	把数组转换为字符串，并返回结果。
+unshift()	向数组的开头添加一个或更多元素，并返回新的长度。
+valueOf()	返回数组对象的原始值 
+</code></pre>
+
+<h3 id="string-对象方法">String 对象方法</h3>
+
+<pre><code>concat()	连接字符串。
+indexOf()	检索字符串。
+lastIndexOf()	从后向前搜索字符串。
+slice()	提取字符串的片断，并在新的字符串中返回被提取的部分。
+split()	把字符串分割为字符串数组。
+toString()	返回字符串。
+valueOf()	返回某个字符串对象的原始值。
+length	字符串的长度
+</code></pre>
+
+<h3 id="history">History</h3>
+
+<pre><code>back()	加载 history 列表中的前一个 URL。
+forward()	加载 history 列表中的下一个 URL。
+go()	加载 history 列表中的某个具体页面。
+</code></pre>
+
+<h3 id="location">Location</h3>
+
+<pre><code>hash	设置或返回从井号 (#) 开始的 URL（锚）。
+host	设置或返回主机名和当前 URL 的端口号。
+hostname	设置或返回当前 URL 的主机名。
+href	设置或返回完整的 URL。
+pathname	设置或返回当前 URL 的路径部分。
+search	设置或返回从问号 (?) 开始的 URL（查询部分）。
+assign()	加载新的文档。
+reload()	重新加载当前文档。
+replace()	用新的文档替换当前文档。
+</code></pre>
+
+<h3 id="document">Document</h3>
+
+<pre><code>document.cookie	设置或返回与当前文档有关的所有 cookie。
+document.referrer	返回载入当前文档的文档的 URL。
+document.title	返回当前文档的标题。
+document.links  返回文档中所有的Area和Link对象引用
+document.getElementById()	返回对拥有指定 id 的第一个对象的引用。
+document.querySelector()  CSS 选择器 语法跟jquery一样
+</code></pre>
+
+<h4 id="document-body-网页宽-高-偏移属性">document.body 网页宽、高、偏移属性</h4>
+
+<pre><code>网页可见区域宽： document.body.clientWidth  
+网页可见区域高： document.body.clientHeight  
+网页可见区域宽： document.body.offsetWidth  (包括边线的宽)  
+网页可见区域高： document.body.offsetHeight (包括边线的高)  
+网页正文全文宽： document.body.scrollWidth  (不包括边线的宽) 
+网页正文全文高： document.body.scrollHeight (不包括边线的高)  
+网页被卷去的高： document.body.scrollTop  
+网页被卷去的左： document.body.scrollLeft  
+</code></pre>
+
+<h4 id="操作文档对象">操作文档对象</h4>
+
+<pre><code>document.createElement('div') 创建并返回一个元素
+document.createTextNode('title') 创建并返回一个文本节点
+document.createAttribute('title')创建并返回一个属性节点
+document.createComment('comment') 创建并返回一个注释节点
+document.createDocumentFragment() 创建并返回一个文档片段
+
+document.getElementById('idName') 返回指定id的元素
+document.querySelector('#id .className') 返回文档中匹配指定的css选择器的第一元素
+document.querySelectorAll() 返回文档中匹配的css选择器的所有元素节点列表
+document.getElementsByClassName('className') 返回指定className的NodeList集合
+document.images 返回文档中所有Image对象引用
+</code></pre>
+
+<h3 id="element">Element</h3>
+
+<h4 id="element-方法">element 方法</h4>
+
+<pre><code>element.getElementsByTagName() 获取元素内的所有指定标签的子元素
+element.insertBefore()	   在指定的已有的子节点之前插入新节点。
+element.appendChild()	   向元素添加新的子节点，作为最后一个子节点。
+element.getAttribute()	   返回元素节点的指定属性值。
+element.getAttributeNode() 返回指定的属性节点。
+element.setAttribute()    设置元素节点指定属性与值
+element.removeChild()     从元素中移除子节点
+element.replaceChild(newnode,oldnode) 用一个新元素替换列表中的某个元素   
+element.removeAttribute() 从元素中移除指定属性
+element.removeAttributeNode() 移除指定属性节点，并返回被移除的节点
+element.hasAttribute()	   判断元素是否拥有指定属性
+element.hasAttributes()   判断元素是否拥有属性
+element.hasChildNodes()   判断元素是否拥有子元素
+element.isEqualNode(node)   判断两个元素是否相等
+element.normalize()  移除空的文本节点，并连接相邻的文本节点
+element.childNodes.item(0) 返回NodeList中位于指定下标的节点
+element.cloneNode(deep) 克隆节点，deep默认为false，为false克隆节点，为true克隆节点及后代
+element.compareDocumentPosition() 比较两个元素的文档位置，1：没有关系，两个节点不属于同一文档。2：第一节点位于第二节点后。4：第一节点定位在第二节点前。8：第一节点位于第二节点内。16：第二节点位于第一节点内。32：没有关系，或是两个节点是同一元素的两个属性，返回值可以是值的组合，例如，返回20意味着第二节点在第一节点内部（16），并且第二节点在第一节点之后(4)
+
+
+</code></pre>
+
+<h4 id="element-属性">element 属性</h4>
+
+<pre><code>element.id	       设置或返回元素的 id。
+element.tagName     获取元素的标签名(大写)
+element.className	元素所有的 class 逗号分隔。
+element.classList 	元素所有的 class 数组形式。
+element.style       设置或返回元素的style属性
+element.innerText   设置或返回元素的内容
+element.innerHTML	设置或返回元素的HTML内容。
+element.textContent 设置或返回节点及其后代的文本内容
+element.nodeName    获取元素的名称
+element.nodeValue   设置或返回元素值
+element.nodeType    获取节点类型（共12中类型 1:Element,2:Attr,3:Text,8:注释,9:根节点，11:DocumentFragment）
+element.attributes	返回元素属性的 NamedNodeMap。
+element.parentNode  返回元素父节点
+element.childNodes  获取元素直接后代的HTML元素和TextNode对象的集合
+element.firstChild	获取元素首个子元素
+element.lastChild	获取元素最后一个子元素
+element.previousSibling 获取上一个同级节点
+element.nextSibling 获取下一个同级节点
+element.accessKey   设置或返回元素的快捷键
+element.title       设置或返回元素的title  
+element.isContentEditable  返回元素是否可编辑
+element.ownerDocument 返回根元素document
+element.childNodes.length 返回NodeList中节点数
+</code></pre>
+
+<h4 id="element-offsetxx-节点宽-高-偏移-包括滚动条-边框">element.offsetXX 节点宽、高、偏移（包括滚动条、边框）</h4>
+
+<pre><code>element.offsetWidth	 元素的宽度(包括padding、border、width)
+element.offsetHeight 元素的高度(包括padding、border、width)
+element.offsetLeft	 元素的左偏移位置
+element.offsetTop	 元素的上偏移位置
+element.offsetParent 元素的偏移容器
+</code></pre>
+
+<h4 id="elment-scrollxx-节点宽-高-卷边-padding加元素内容的宽高">elment.scrollXX 节点宽、高、卷边（padding加元素内容的宽高）</h4>
+
+<pre><code>element.scrollHeight 元素的完整高度(padding+内容高，不含边框)
+element.scrollWidth	 元素的整体宽度(padding+内容宽，不含边框)
+element.scrollLeft	 元素左边卷去的距离
+element.scrollTop	 元素上边卷去的距离
+</code></pre>
+
+<h4 id="element-clientxx-节点宽-高-边框-padding加元素内容的宽高">element.clientXX 节点宽、高、边框（padding加元素内容的宽高）</h4>
+
+<pre><code>element.clientHeight 元素的高度(padding+内容高，不含边框)
+element.clientWidth  元素的宽度(padding+内容宽，不含边框)
+element.clientLeft   元素的左边框宽度
+element.clientTop    元素的上边框宽度
+</code></pre>
+
+<h3 id="获取网页屏幕宽高">获取网页屏幕宽高</h3>
+
+<pre><code>
+网页正文部分上： window.screenTop  
+网页正文部分左： window.screenLeft  
+屏幕分辨率的高： window.screen.height  
+屏幕分辨率的宽： window.screen.width  
+屏幕可用工作区高度： window.screen.availHeight  
+屏幕可用工作区宽度： window.screen.availWidth
+屏幕可视区域的宽度：window.innerWidth （包括边框、边距、滚动条，不包括工具条）
+屏幕可视区域的高度：window.innerHeight（包括边框、边距、滚动条，不包括工具条）
+屏幕可视区域的宽度：window.outerWidth （包括边框、边距、滚动条、工具条）
+屏幕可视区域的高度：window.outerHeight （包括边框、边距、滚动条、工具条）
+</code></pre>
+
+<h3 id="事件">事件</h3>
+
+<pre><code>element.addEventListener(event,handler,useCapture)  向文档添加事件句柄,useCapture为true为捕获型事件，为false为冒泡型事件，默认为false，捕获型事件从外向内冒泡且无法停止，冒泡型事件从内向外冒泡，使用`stopPropagation()`停止冒泡
+element.removeEventListener(event,handler,userCapture) 移除由addEventListener添加的事件，参数必须与添加时一致
+</code></pre>
+
+<h3 id="json">JSON</h3>
+
+<pre><code>JSON.parse用于从一个字符串中解析出json对象
+JSON.stringify()用于从一个对象解析出字符串
+</code></pre>
+
+<h3 id="window">Window</h3>
+
+<pre><code>clearInterval()	取消由 setInterval() 设置的 timeout。
+clearTimeout()	取消由 setTimeout() 方法设置的 timeout。
+scroll()	 
+scrollTo()	把内容滚动到指定的坐标。
+setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式。
+setTimeout()	在指定的毫秒数后调用函数或计算表达式。
+</code></pre>
+
+<h3 id="math-对象方法">Math 对象方法</h3>
+
+<pre><code>abs(x)	返回数的绝对值。
+ceil(x)	对数进行上舍入。
+floor(x)	对数进行下舍入。
+max(x,y)	返回 x 和 y 中的最高值。
+min(x,y)	返回 x 和 y 中的最低值。
+random()	返回 0 ~ 1 之间的随机数。
+round(x)	把数四舍五入为最接近的整数。
+</code></pre>
+
+<h3 id="number-对象方法">Number 对象方法</h3>
+
+<pre><code>toString	把数字转换为字符串，使用指定的基数。
+valueOf	返回一个 Number 对象的基本数字值。
+</code></pre>
+
+<h3 id="date-对象方法">Date 对象方法</h3>
+
+<pre><code>new Date()   获取当前时间对象
+Date.now()   获取当前时间戳
+</code></pre>
+
+<h3 id="object-对象方法">Object 对象方法</h3>
+
+<pre><code>Object.keys(obj)	获取对象的所有key到数组
+Object.values(obj) 获取对象的所有值到数组
+Object.assign(obj1,obj2,objn,....) 合并多个对象，key相同后面覆盖前面
+Object.create(obj) 以obj为原型生成一个新对象
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/js.html">js</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/10/openssl-enc.html" data-tooltip="openssl加密解压缩">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/10/vue-axios-post-abnormal.html" data-tooltip="vue axios POST请求后端接收数据异常处理">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/10/openssl-enc.html" data-tooltip="openssl加密解压缩">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/10/vue-axios-post-abnormal.html" data-tooltip="vue axios POST请求后端接收数据异常处理">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2017\/10\/js.html';
+          
+            this.page.identifier = '\/2017\/10\/js.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

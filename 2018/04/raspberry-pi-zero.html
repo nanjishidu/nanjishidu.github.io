@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="入手pi zero w，体验最小型主板">
+
+
+<meta property="og:description" content="入手pi zero w，体验最小型主板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="raspberry pi zero体验">
+<meta name="twitter:title" content="raspberry pi zero体验">
+<meta property="og:url" content="https://nanjishidu.me/2018/04/raspberry-pi-zero.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2018/04/raspberry-pi-zero.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="入手pi zero w，体验最小型主板">
+<meta name="twitter:description" content="入手pi zero w，体验最小型主板">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-04-04T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-04-04T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="raspberry">
+    
+      <meta property="article:tag" content="ssh">
+    
+      <meta property="article:tag" content="wifi">
+    
+      <meta property="article:tag" content="监控">
+    
+      <meta property="article:tag" content="usb虚拟网卡">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2018/0404.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2018/0404.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>raspberry pi zero体验</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2018/04/raspberry-pi-zero.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      raspberry pi zero体验
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-04-04T00:00:00Z">
+        
+  April 4, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>入手pi zero w，体验最小型主板</p>
+
+<h2 id="前言">前言</h2>
+
+<p>以前写过一篇关于<a href="https://nanjishidu.me/2016/11/raspberry-init.html">树莓派使用备忘</a>的blog，使用的是pi 3B。</p>
+
+<p>pi 3B在一段时间作为NAS服务器使用过一段时间。后来组装了一台小主机后，3B基本上就处于吃灰状态。</p>
+
+<p>最近想将3B利用起来，实现家庭监控。可能吃灰很久的缘故，点亮后设备异常，重新刻录系统后，故障依旧。</p>
+
+<p>果断下单pi zero w。使用闪迪16G TF卡,读速约98MB/秒。</p>
+
+<h2 id="1-简单对比">1. 简单对比</h2>
+
+<ul>
+<li>pi zero 和pi zero w的区别
+
+<ul>
+<li>zero w增加了802.11 b/g/n WiFi无线网卡和低功耗蓝牙4.1 (BLE)。</li>
+</ul></li>
+<li>pi zero w 和 pi 3B 区别
+
+<ul>
+<li>pi zero w cpu单核1GHz的cpu，pi 3B 四核1.2GHz</li>
+<li>pi zero w 内存512MB，pi 3B 内存1024MB</li>
+<li>pi zero w 无网卡，HDMI口，只有小口的HDMI。</li>
+</ul></li>
+</ul>
+
+<h2 id="2-安装系统">2. 安装系统</h2>
+
+<p>个人倾向安装raspbain lite版本。mac 系统推荐使用<strong>etcher</strong>刻录镜象，非常简单。</p>
+
+<h2 id="3-开启ssh服务">3. 开启ssh服务</h2>
+
+<p>系统安装完，默认ssh服务未开启。在boot分区新建一个文件，文件命名为 <strong>ssh</strong> 。</p>
+
+<pre><code>2016-11-25:
+  * SSH disabled by default; can be enabled by creating a file with name &quot;ssh&quot; in boot partition
+</code></pre>
+
+<h2 id="4-配置无线wifi">4. 配置无线wifi</h2>
+
+<p>修改/etc/wpa_supplicant/wpa_supplicant.conf，追加无线配置。</p>
+
+<pre><code>network={
+  ssid=&quot;wifi1&quot;
+  psk=&quot;000000&quot;
+  key_mgmt=WPA-PSK
+  priority=999
+}
+network={
+  ssid=&quot;wifi2&quot;
+  psk=&quot;000000&quot;
+  key_mgmt=WPA-PSK
+  priority=888
+}
+</code></pre>
+
+<pre><code>ssid 无线名字
+psk  无线名字
+key_mgmt 加密模式，如果没有密码，为NONE
+priority 连接优先级，数字越大优先级越高（不可以是负数
+scan_ssid 连接隐藏WiFi时需要指定该值为1
+</code></pre>
+
+<h2 id="5-摄像头配置">5. 摄像头配置</h2>
+
+<h3 id="5-1-开启摄像头">5.1. 开启摄像头</h3>
+
+<p>命令行下执行以下命令,开启摄像头</p>
+
+<pre><code>sudo raspi-config
+</code></pre>
+
+<h3 id="5-2-拍摄照片">5.2. 拍摄照片</h3>
+
+<pre><code>raspistill -o image.jpg
+
+# -v 调试信息查看。
+# -w 图像宽度
+# -h 图像高度
+# -rot 图像旋转角度，只支持 0、90、180、270 度
+# -o 图像输出地址，例如image.jpg，如果文件名为“-”，将输出发送至标准输出设备
+# -t 获取图像前等待时间，默认为5000，即5秒
+# -tl 多久执行一次图像抓取。
+
+raspistill -o image%d.jpg -rot 180 -w 1024 -h 768 -t 20000 -tl 5000 -v
+
+# 截取一张宽1024px，高768px，旋转180度的图片，抓取的总时长为20秒，并且每5秒抓取一张，保存的文件名为image1.jpg,image2.jpg
+</code></pre>
+
+<h3 id="5-3-通过vlc监控">5.3. 通过vlc监控</h3>
+
+<pre><code>
+sudo apt-get update
+sudo apt-get install vlc
+sudo raspivid -o - -t 0 -w 1280 -h 1024 -fps 25 -b 1200000 |cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}\' :demux=h264
+
+客户端安装VLC，打开媒体网络串流输入 http://IP:8090 查看实时不卡的网络监控了。
+使用PI官方的raspivid捕获视频工具把视频流输出到vlc，通过vlc转码成h264网络视频流通过http协议以ts的形式封装，然后输出到8090端口。 
+</code></pre>
+
+<h3 id="5-4-参考链接">5.4 参考链接</h3>
+
+<ul>
+<li><a href="http://blog.lcyown.cn/2017/02/09/raspberry-camera/">树莓派摄像头的几种使用方法</a></li>
+</ul>
+
+<h3 id="6-通过usb配置虚拟网卡进行连接">6. 通过usb配置虚拟网卡进行连接</h3>
+
+<p>pi zero 因为没有有线网卡，调试不是很方便。除了使用串口链接外，可以通过usb直连。</p>
+
+<h4 id="6-1-修改配置文件">6.1. 修改配置文件</h4>
+
+<ul>
+<li><p>修改boot 文件下的config.txt 添加 <code>dtoverlay=dwc2</code> 打开usb网卡模式</p></li>
+
+<li><p>修改boot 文件下的cmdline.txt 在rootwait参数之后添加<code>modules-load=dwc2,g_ether</code>，在打开系统时开启usb网卡模式。</p></li>
+</ul>
+
+<h4 id="6-2-通过usb链接设备">6.2. 通过usb链接设备</h4>
+
+<p>用USB数据线在Pi 0上供电。使用的端口是USB，而不是PWR。这个端口允许您为Pi 0提供电源，并进行数据传输。连接后等待系统初始化配置。</p>
+
+<p>通过如下命令进行ssh连接</p>
+
+<pre><code>ssh pi@raspberrypi.local 
+</code></pre>
+
+<h4 id="6-3-配置usb网卡的静态ip">6.3. 配置usb网卡的静态ip</h4>
+
+<p>通过<code>sudo vi /etc/network/interfaces</code>添加如下配置。</p>
+
+<pre><code>allow-hotplug usb0
+iface usb0 inet static
+address 10.0.0.2
+netmask 255.255.255.0
+gateway 10.0.0.1
+#network 10.0.0.0
+#broadcast 10.0.0.255
+#dns-nameservers 8.8.8.8 4.4.4.4
+</code></pre>
+
+<pre><code>sudo ifdown usb0
+sudo ifup usb0
+ifconfig usb0
+</code></pre>
+
+<h4 id="6-4-参考链接">6.4. 参考链接</h4>
+
+<ul>
+<li><a href="https://www.thepolyglotdeveloper.com/2016/06/connect-raspberry-pi-zero-usb-cable-ssh/">Connect To A Raspberry Pi Zero With A USB Cable And SSH</a></li>
+<li><a href="http://www.linux-usb.org/usbnet/">The GNU/Linux &ldquo;usbnet&rdquo; Driver Framework</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/raspberry.html">raspberry</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/ssh.html">ssh</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/wifi.html">wifi</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/%E7%9B%91%E6%8E%A7.html">监控</a>
+
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/usb%E8%99%9A%E6%8B%9F%E7%BD%91%E5%8D%A1.html">usb虚拟网卡</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2018/06/mysql.html" data-tooltip="mysql数据库导入导出">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2018/01/sersync-rsync-inotity.html" data-tooltip="sersync基于rsync&#43;inotify实现数据实时同步">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2018/06/mysql.html" data-tooltip="mysql数据库导入导出">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2018/01/sersync-rsync-inotity.html" data-tooltip="sersync基于rsync&#43;inotify实现数据实时同步">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2018\/04\/raspberry-pi-zero.html';
+          
+            this.page.identifier = '\/2018\/04\/raspberry-pi-zero.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

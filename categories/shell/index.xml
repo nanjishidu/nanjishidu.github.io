@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on nanjishidu</title>
+    <link>https://gophper.com/categories/shell.html</link>
+    <description>Recent content in Shell on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://gophper.com/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>通过shell写入多行文本</title>
+      <link>https://gophper.com/2017/05/shell-eof.html</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/05/shell-eof.html</guid>
+      <description>&lt;p&gt;最近些自动化脚本的时候，需要创建默认文件。根据传入不同变量生成不同的文件，通过
+shell EOF和cat可以写入多行文本。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell压缩解压</title>
+      <link>https://gophper.com/2017/03/linux-shell-compress.html</link>
+      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/linux-shell-compress.html</guid>
+      <description>&lt;p&gt;记录Linux常用压缩解压命令:tar gzip zip
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell文本处理</title>
+      <link>https://gophper.com/2017/03/linux-shell-text.html</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/linux-shell-text.html</guid>
+      <description>&lt;p&gt;记录Linux文本处理命令:grep,cut,sed,awk,paste,tac。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell文件</title>
+      <link>https://gophper.com/2017/03/linux-shell-file.html</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/linux-shell-file.html</guid>
+      <description>&lt;p&gt;记录Linux文件操作相关操作，包含文件创建，文件权限，查找，统计等。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell常用命令</title>
+      <link>https://gophper.com/2017/03/linux-shell-command.html</link>
+      <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/linux-shell-command.html</guid>
+      <description>&lt;p&gt;记录Linux常用shell命令：cat、find、xargs、split等。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell基础</title>
+      <link>https://gophper.com/2017/03/linux-shell-base.html</link>
+      <pubDate>Sat, 18 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2017/03/linux-shell-base.html</guid>
+      <description>&lt;p&gt;最近读 &lt;strong&gt;《linux脚本攻略》&amp;ndash;Sarath Lakshman&lt;/strong&gt; ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux常用命令[grep,awk,sed]</title>
+      <link>https://gophper.com/2016/04/linux-grep-awk-sed.html</link>
+      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://gophper.com/2016/04/linux-grep-awk-sed.html</guid>
+      <description>&lt;p&gt;grep,awk,sed 主要用于文本处理,编辑查找分析。。。
+最近接手遗留项目，针对眼花撩乱的命名规则以及飞来飞去的方法调用，通过grep搜索方法，通过sed 规范方法名。。。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

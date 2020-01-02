@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vendor on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/vendor.html</link>
+    <description>Recent content in vendor on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/vendor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Glide:Package Management for Golang</title>
+      <link>https://nanjishidu.me/2017/05/golang-glide-vendor.html</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/golang-glide-vendor.html</guid>
+      <description>&lt;p&gt;glide是golang的一个包管理工具。入门使用比较简单，使用过一段时间。随着第三方包增多,结构复杂后，发现对glide的理解并不深入，花时间整理下&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang vendor介绍</title>
+      <link>https://nanjishidu.me/2017/04/golang-vendor.html</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/golang-vendor.html</guid>
+      <description>&lt;p&gt;golang vendor是为了解决golang依赖问题的，golang1.6后默认开启。经常遇到引入第三方包但是开源方更改了代码导致无法正常编译的情况。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

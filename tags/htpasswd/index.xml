@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>htpasswd on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/htpasswd.html</link>
+    <description>Recent content in htpasswd on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/htpasswd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[gophper]nginx添加密码访问</title>
+      <link>https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html</link>
+      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html</guid>
+      <description>&lt;p&gt;nginx通过 auth_basic和auth_basic_user_file配置密码保护。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

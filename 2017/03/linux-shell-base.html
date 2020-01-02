@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="nanjishidu">
+<meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
+<meta name="description" content="最近读 《linux脚本攻略》&ndash;Sarath Lakshman ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。">
+
+
+<meta property="og:description" content="最近读 《linux脚本攻略》&ndash;Sarath Lakshman ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux-shell基础">
+<meta name="twitter:title" content="linux-shell基础">
+<meta property="og:url" content="https://nanjishidu.me/2017/03/linux-shell-base.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2017/03/linux-shell-base.html">
+<meta property="og:site_name" content="nanjishidu">
+<meta property="og:description" content="最近读 《linux脚本攻略》&ndash;Sarath Lakshman ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。">
+<meta name="twitter:description" content="最近读 《linux脚本攻略》&ndash;Sarath Lakshman ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-03-18T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-03-18T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="technology">
+    
+  
+  
+    
+      <meta property="article:tag" content="shell">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/2017/0318.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2017/0318.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://nanjishidu.me/media/author.png">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
+
+
+    <title>linux-shell基础</title>
+
+    <link rel="icon" href="https://nanjishidu.me/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://nanjishidu.me/2017/03/linux-shell-base.html">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://nanjishidu.me/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://nanjishidu.me/">nanjishidu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://nanjishidu.me/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://nanjishidu.me/#about">
+          <img class="sidebar-profile-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">nanjishidu</h4>
+        
+          <h5 class="sidebar-profile-bio">do one thing and do it well</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/archives.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/categories.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/tags.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/frend.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">Links</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/2013/01/about.html">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/nanjishidu" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://nanjishidu.me/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      linux-shell基础
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-03-18T00:00:00Z">
+        
+  March 18, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://nanjishidu.me/categories/technology">technology</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>最近读 <strong>《linux脚本攻略》&ndash;Sarath Lakshman</strong> ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。</p>
+
+<h2 id="一-基础">一、基础</h2>
+
+<h3 id="1-1">1.1.</h3>
+
+<p>$ 表示普通用户；# 表示超级用户，超级用户是lunx系统中权限最高的用户；</p>
+
+<p><code>#!</code> 是shell脚本起始,例如：#!/bin/sh;shell脚本以注释以#开始一直延续到行尾</p>
+
+<h3 id="1-2-echo和printf">1.2.echo和printf</h3>
+
+<p>printf支持格式化字符串.</p>
+
+<p>%-5s指明一个格式为左对齐且宽度为5的字符串替代。-表示左对齐，字符串默认采用右对齐形式。</p>
+
+<p>%-4.2f 其中.2 指定保留2个小数位</p>
+
+<pre><code>printf &quot;%-5s %-10s %-4s\n&quot; No Name Mark
+printf &quot;%-5s %-10s %-4.2f\n&quot; 1 jiajia 90.1234
+</code></pre>
+
+<h3 id="1-3-变量和环境变量">1.3.变量和环境变量</h3>
+
+<p>自定义的环境变量可以存放在 ~/.bashrc 或者 /etc/profile 。</p>
+
+<pre><code>name=&quot;jiajia&quot;
+echo $name
+echo ${name}
+#输出环境变量
+echo $PATH
+#输出当前的shell版本
+echo $SHELL
+echo $0
+#输出UID,root用户的UID为0
+echo $UID
+</code></pre>
+
+<h3 id="1-4-计算">1.4.计算</h3>
+
+<p>let命令直接进行基本的算数操作，普通的变量赋值方法定义数值会被存储为字符串。</p>
+
+<p>操作符[]的使用和let命令类似。bc是一个用于数学运算的高级工具，精密计算器包含了大量的选项。</p>
+
+<pre><code>#!/bin/sh
+no1=4
+no2=5
+let result=no1+no2
+echo $result
+#其他用法
+result = $[no1+no2]
+result = $[$no1+5]
+result = $((no1+5))
+#bc
+no=54
+result=`echo &quot;$no*15&quot;|bc`
+echo $result
+</code></pre>
+
+<h3 id="1-5-文件描述符">1.5.文件描述符</h3>
+
+<pre><code>0-stdin 标准输入
+1-stdout 标准输出
+2-stderr 标准错误
+cmd 2&gt;&amp;1 out.txt
+</code></pre>
+
+<h3 id="1-6-数组和关联数组">1.6.数组和关联数组</h3>
+
+<pre><code>array_var=(1 2 3 4 5 6)
+array_var1[0]=&quot;t1&quot;
+array_var1[1]=&quot;t2&quot;
+array_var1[2]=&quot;t3&quot;
+array_var1[3]=&quot;t4&quot;
+array_var1[4]=&quot;t5&quot;
+	
+echo ${array_var1[0]}
+index=2
+echo ${array_var1[$index]}
+#以清单的形式打印出数组中的所有值
+echo ${array_var1[*]}
+#也可以使用
+echo ${array_var1[@]}
+#打印数组的长度
+echo ${#arrat_var1[*]}
+#定义关联数组
+declare -A fruits_value
+fruits_value=([apple]='100' [orange]='150')
+#列出索引
+echo ${!fruits_value[*]}
+</code></pre>
+
+<h3 id="1-7-使用别名-alias">1.7.使用别名 alias</h3>
+
+<pre><code>alias install = 'sudo apt-get install'
+</code></pre>
+
+<h3 id="1-8-时间">1.8.时间</h3>
+
+<pre><code>date
+输出：2017年 3月13日 星期一 14时11分06秒 CST
+#打印纪元时，为从世界标准时间1970年1月1日0时0分0秒起至当前的总秒数
+date +%s
+输出：1489385473
+#格式化日期和时间
+date -s &quot;21 June 2009 11:01:22&quot;
+#年 %y(eq:10) %Y(eq:2010)
+#月 %b(eq:Nov) %B(eq:November)
+#日 %d(eq:31)
+#时 %I或%H(eq:08)
+#分 %M(eq:33)
+#秒 %S(eq:10)
+#纳秒 %N(eq:695208515)
+#UNIX纪元时(以秒为单位) %N(eq:1290049486)
+#星期 %a(eq:Sat) %A(eq:Saturday)
+#固定时间格式(mm/dd/yy) %D(eq:10/18/10)
+date &quot;+%d%B%Y&quot;
+输出：19March2017
+date -d &quot;Thu Nov 18 08:07:21 IST 2010&quot; +%s
+输出：1290047841
+</code></pre>
+
+<h3 id="1-9-函数和参数">1.9.函数和参数</h3>
+
+<pre><code>#定义函数
+function fname(){
+	statement;
+}
+#传递参数
+echo $0 脚本名
+echo $1 第一个参数
+echo $2  第二个参数
+#以列表的形式一次性打印所有参数
+echo $@
+echo $*
+#读取命令返回值状态
+echo $? 
+</code></pre>
+
+<h3 id="1-10-以不按回车键的方式读取字符-n-read">1.10.以不按回车键的方式读取字符&rdquo;n&rdquo;(read)</h3>
+
+<pre><code>#从输入中读取几个字符存入变量 -n number_of_chars
+read -n 2 var
+#用不回显的方式读取密码 -s
+read -s var
+#显示提示信息 -p
+read -p &quot;enter input:&quot; var
+#在特定时限内读取输入 -t timeout
+read -t 2 var 
+#用定界符结束输入行 -d delim_charvar
+read -d &quot;:&quot; var 
+</code></pre>
+
+<h3 id="1-11-字段分割符和迭代器-ifs">1.11.字段分割符和迭代器(IFS)</h3>
+
+<pre><code>#!/bin/sh
+line=&quot;root:x:0:0:root:/root:/bin/bash&quot;
+oldIFS=$IFS;
+IFS=&quot;:&quot;
+count=0
+for item in $line;
+do
+	[ $count -eq 0 ] &amp;&amp; user=$item;
+	[ $count -eq 6 ] &amp;&amp; shell=$item;
+	let count++
+done;
+IFS=$oldIFS
+echo $user\'s shell is $shell
+</code></pre>
+
+<h3 id="1-12-比较与测试">1.12.比较与测试</h3>
+
+<ul>
+<li><p>常用运算符</p>
+
+<pre><code>[ condition ]&amp;&amp;action; 如果为真则执行action
+[ condition ]||action; 如果为假泽执行action
+&amp;&amp; 逻辑与运算符
+|| 逻辑或预算符
+-gt 大于
+-lt 小于
+-ge 大于或者等于
+-le 小于或者等于
+-eq 等于
+</code></pre></li>
+
+<li><p>文件系统相关测试</p>
+
+<pre><code>[ -f $file_var ] 给定变量是否包含正常的文件路径和文件名
+[ -x $var ] 给定变量是否包含的文件可执行
+[ -d $var ] 给定变量的是否包含的是目录
+[ -e $var ] 给定的变量包含的文件是否存在
+[ -c $var ] 给定的变量是否包含的是一个字符设备文件的路径
+[ -b $var ] 给定的变量是否包含的是一个块设备文件的路径
+[ -w $var ] 给定变量包含的文件是否可写
+[ -r $var ] 给定变量包含的文件是否可读
+[ -L $var ] 给定变量是否包含一个符号链接
+</code></pre></li>
+
+<li><p>字符串比较</p></li>
+</ul>
+
+<p>使用字符串比较时最好用双中括号，规避因为单括号产生的错误。</p>
+
+<pre><code>[[ $str1 == $str2 ]] 检查两个字符串是否相等
+[[ -n $str1 ]] 是否包含非空字符串
+[[ -z $str1 ]] 是否包含空字符串
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/shell.html">shell</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/linux-shell-command.html" data-tooltip="linux-shell常用命令">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/raspberry-ntpdate.html" data-tooltip="树莓派时间同步">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 nanjishidu. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/linux-shell-command.html" data-tooltip="linux-shell常用命令">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2017/03/raspberry-ntpdate.html" data-tooltip="树莓派时间同步">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?421392ddd5d4f3cea01e5dc29f43ed4a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script
+    type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1271633978'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1271633978%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://nanjishidu.me/media/author.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">nanjishidu</h4>
+    
+      <div id="about-card-bio">do one thing and do it well</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Gopher
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://nanjishidu.me/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://nanjishidu.me/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/nanjishidu.me\/2017\/03\/linux-shell-base.html';
+          
+            this.page.identifier = '\/2017\/03\/linux-shell-base.html'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'nanjishidu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

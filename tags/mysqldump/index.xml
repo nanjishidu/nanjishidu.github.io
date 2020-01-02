@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysqldump on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/mysqldump.html</link>
+    <description>Recent content in mysqldump on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/mysqldump/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysql数据库导入导出</title>
+      <link>https://nanjishidu.me/2018/06/mysql.html</link>
+      <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/06/mysql.html</guid>
+      <description>&lt;p&gt;mysql数据库导入导出整理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql数据备份恢复</title>
+      <link>https://nanjishidu.me/2016/03/mysql-backup.html</link>
+      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/03/mysql-backup.html</guid>
+      <description>&lt;p&gt;常用两条mysql命令，用于数据库的备份和恢复。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>top on nanjishidu</title>
+    <link>https://nanjishidu.me/tags/top.html</link>
+    <description>Recent content in top on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/tags/top/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux和macOS下top命令区别</title>
+      <link>https://nanjishidu.me/2019/03/linux-mac-top.html</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/03/linux-mac-top.html</guid>
+      <description>&lt;p&gt;top命令是常用的性能分析工具，被广泛用于监视服务器的负载，能够实时显示系统中各个进程的资源占用情况。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

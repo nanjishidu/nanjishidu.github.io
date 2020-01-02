@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nanjishidu</title>
+    <link>https://nanjishidu.me/</link>
+    <description>Recent content on nanjishidu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanjishidu.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysql主从同步</title>
+      <link>https://nanjishidu.me/2019/11/mysql-master-slave.html</link>
+      <pubDate>Fri, 29 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/11/mysql-master-slave.html</guid>
+      <description>&lt;p&gt;mysql主从同步配置&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>博客升级</title>
+      <link>https://nanjishidu.me/2019/09/blog-update.html</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/09/blog-update.html</guid>
+      <description>&lt;p&gt;nanjishidu.me构建程序升级&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]解决无法在您所在的国家地区购买google play</title>
+      <link>https://nanjishidu.me/2019/03/zhuan-buy-google-play-service.html</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/03/zhuan-buy-google-play-service.html</guid>
+      <description>&lt;p&gt;在google play购买APP，绑定双币卡支付时提示 无法在您所在的国家/地区购买google play。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux和macOS下top命令区别</title>
+      <link>https://nanjishidu.me/2019/03/linux-mac-top.html</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/03/linux-mac-top.html</guid>
+      <description>&lt;p&gt;top命令是常用的性能分析工具，被广泛用于监视服务器的负载，能够实时显示系统中各个进程的资源占用情况。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>博客升级</title>
+      <link>https://nanjishidu.me/2019/03/blog-update.html</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/03/blog-update.html</guid>
+      <description>&lt;p&gt;nanjishidu.me构建程序升级&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>阿里云通信模版变量字符限制</title>
+      <link>https://nanjishidu.me/2019/01/alibaba-sms.html</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2019/01/alibaba-sms.html</guid>
+      <description>&lt;p&gt;阿里云通讯模版变量限制20字符&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>查询网络接口占用</title>
+      <link>https://nanjishidu.me/2018/11/netstat-lsof.html</link>
+      <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/11/netstat-lsof.html</guid>
+      <description>&lt;p&gt;通过netstat或者lsof查询网络接口占用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql数据库导入导出</title>
+      <link>https://nanjishidu.me/2018/06/mysql.html</link>
+      <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/06/mysql.html</guid>
+      <description>&lt;p&gt;mysql数据库导入导出整理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>raspberry pi zero体验</title>
+      <link>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</link>
+      <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</guid>
+      <description>&lt;p&gt;入手pi zero w，体验最小型主板&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>sersync基于rsync&#43;inotify实现数据实时同步</title>
+      <link>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</guid>
+      <description>&lt;p&gt;最近有监听文件变化进行实时同步的需求，选用sersync实现数据实时同步&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>总结2017展望2018</title>
+      <link>https://nanjishidu.me/2018/01/2017-2018.html</link>
+      <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2018/01/2017-2018.html</guid>
+      <description>&lt;p&gt;2018新的一年，新的开始&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>博客升级</title>
+      <link>https://nanjishidu.me/2017/12/blog-update.html</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/12/blog-update.html</guid>
+      <description>&lt;p&gt;nanjishidu.me 构建程序升级&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>npm-check-updates升级element-ui2.x</title>
+      <link>https://nanjishidu.me/2017/12/npm-check-updates-element-ui.html</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/12/npm-check-updates-element-ui.html</guid>
+      <description>&lt;p&gt;element-ui发布2.x版本后，1.x版本停止维护。使用npm-check-updates检测项目package.json升级第三方包。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信支付(退款结果通知)golang AES-256-ECB解密</title>
+      <link>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</link>
+      <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
+      <description>&lt;p&gt;处理微信支付退款结果通知时，需要对返回数据进行AES-256-ECB解密，golang标准库未支持AES ECB加解密，特此记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openssl加密解压缩</title>
+      <link>https://nanjishidu.me/2017/10/openssl-enc.html</link>
+      <pubDate>Sat, 21 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/10/openssl-enc.html</guid>
+      <description>&lt;p&gt;隐私信息裸奔在icloud，通过openssl进行加密，保障数据安全。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>js常用速查</title>
+      <link>https://nanjishidu.me/2017/10/js.html</link>
+      <pubDate>Fri, 13 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/10/js.html</guid>
+      <description>&lt;p&gt;记录js常用方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vue axios POST请求后端接收数据异常处理</title>
+      <link>https://nanjishidu.me/2017/10/vue-axios-post-abnormal.html</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/10/vue-axios-post-abnormal.html</guid>
+      <description>&lt;p&gt;通过修改content-type，解决vue axios post请求异常。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>定期更新Homebrew</title>
+      <link>https://nanjishidu.me/2017/07/homebrew.html</link>
+      <pubDate>Mon, 31 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/homebrew.html</guid>
+      <description>&lt;p&gt;Homebrew是mac软件安装命令行工具。已在mac下办公好几年了，brew是标配。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>服务监控prometheus</title>
+      <link>https://nanjishidu.me/2017/07/node-exporter-cadvisor-alertmanager-prometheus-grafana.html</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/node-exporter-cadvisor-alertmanager-prometheus-grafana.html</guid>
+      <description>&lt;p&gt;架构方案: node-exporter + cAdvisor + alertmanager + prometheus + Grafana&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>web服务器caddy</title>
+      <link>https://nanjishidu.me/2017/07/caddy.html</link>
+      <pubDate>Fri, 21 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/caddy.html</guid>
+      <description>&lt;p&gt;caddy是go语言开发web服务器,功能强大，二进制分发，便于部署。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker-compose使用介绍</title>
+      <link>https://nanjishidu.me/2017/07/docker-compose.html</link>
+      <pubDate>Thu, 20 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/docker-compose.html</guid>
+      <description>&lt;p&gt;越来越多的服务通过docker启用，每次系统重启后需要查看容器是否启动，测试的时候需要操作容器。docker-compose解决了这个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vscode搭建开发环境</title>
+      <link>https://nanjishidu.me/2017/07/vscode.html</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/vscode.html</guid>
+      <description>&lt;p&gt;记录vscode搭建开发环境，备查。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搭建本地的gitea</title>
+      <link>https://nanjishidu.me/2017/07/gitea.html</link>
+      <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/07/gitea.html</guid>
+      <description>&lt;p&gt;在某种机缘下，结识了&lt;a href=&#34;https://gitea.io/zh-CN/&#34; target=&#34;_blank&#34;&gt;gitea&lt;/a&gt;。golang开发，部署简单，搭建在本地树莓派服务器中使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>markdown 语法</title>
+      <link>https://nanjishidu.me/2017/06/markdown-markdown.html</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/06/markdown-markdown.html</guid>
+      <description>&lt;p&gt;记录常用markdown语法，长期更新，备查。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>字节序</title>
+      <link>https://nanjishidu.me/2017/05/byte-order.html</link>
+      <pubDate>Tue, 30 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/byte-order.html</guid>
+      <description>&lt;p&gt;参考同学们的介绍和golang的encoding/binary包,特记录备查&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Glide:Package Management for Golang</title>
+      <link>https://nanjishidu.me/2017/05/golang-glide-vendor.html</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/golang-glide-vendor.html</guid>
+      <description>&lt;p&gt;glide是golang的一个包管理工具。入门使用比较简单，使用过一段时间。随着第三方包增多,结构复杂后，发现对glide的理解并不深入，花时间整理下&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编写.gitignore</title>
+      <link>https://nanjishidu.me/2017/05/git-gitignore.html</link>
+      <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/git-gitignore.html</guid>
+      <description>&lt;p&gt;git提交的时候需要将一些文件或者目录过滤掉,比如程序编译后的文件,macos隐藏文件等。
+使用.gitnore可以解决这类问题，做简要记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>通过shell写入多行文本</title>
+      <link>https://nanjishidu.me/2017/05/shell-eof.html</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/shell-eof.html</guid>
+      <description>&lt;p&gt;最近些自动化脚本的时候，需要创建默认文件。根据传入不同变量生成不同的文件，通过
+shell EOF和cat可以写入多行文本。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker构建redis集群测试环境</title>
+      <link>https://nanjishidu.me/2017/05/docker-redis.html</link>
+      <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/05/docker-redis.html</guid>
+      <description>&lt;p&gt;因为业务需求，最近需要部署redis主从集群进行测试。正好最近在研究docker，发现docker配置redis集群特别方便迅速。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]centos关闭selinux</title>
+      <link>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</guid>
+      <description>&lt;p&gt;centos selinux默认是启用状态。selinux可能会影响服务器服务，如php，建议关闭。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]服务器新旅程(virmach-vps-bbr)</title>
+      <link>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</link>
+      <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</guid>
+      <description>&lt;p&gt;谷歌开源TCP BBR拥塞控制算法,并提交了linux内核,最新的 4.10 版内核已经用上了该算法。部署后测试后，网速提升了很多。采用virmach西雅图机房服务器进行测试,部署centos7。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx模块实现追加和修改响应内容</title>
+      <link>https://nanjishidu.me/2017/04/gophper-nginx-ngx_http_addition_module-ngx_http_sub_module.html</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/gophper-nginx-ngx_http_addition_module-ngx_http_sub_module.html</guid>
+      <description>&lt;p&gt;ngx_http_addition_module在响应之前或者之后追加文本内容,ngx_http_sub_module模块是一个过滤器，它修改网站响应内容中的字符串。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac终端环境Iterm2 zsh oh-my-zsh screen</title>
+      <link>https://nanjishidu.me/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</link>
+      <pubDate>Sun, 23 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/mac-iterm2-zsh-oh-my-zsh-screen.html</guid>
+      <description>&lt;p&gt;以前在mac环境下只使用默认终端工具，最近接触zsh和oh-my-zsh感觉功能挺强大，特此记录。同时对常用的screen命令进行简要介绍。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang vendor介绍</title>
+      <link>https://nanjishidu.me/2017/04/golang-vendor.html</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/golang-vendor.html</guid>
+      <description>&lt;p&gt;golang vendor是为了解决golang依赖问题的，golang1.6后默认开启。经常遇到引入第三方包但是开源方更改了代码导致无法正常编译的情况。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang使用aes加密和解密</title>
+      <link>https://nanjishidu.me/2017/04/golang-aes.html</link>
+      <pubDate>Sun, 16 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/04/golang-aes.html</guid>
+      <description>&lt;p&gt;密码学中的高级加密标准（Advanced Encryption Standard，AES)(对称加密算法)，又称Rijndael加密法，这个标准用来替代原先的DES。AES加密数据块分组长度必须为128bit，密钥长度可以是128bit、192bit、256bit中的任意一个。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell压缩解压</title>
+      <link>https://nanjishidu.me/2017/03/linux-shell-compress.html</link>
+      <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/linux-shell-compress.html</guid>
+      <description>&lt;p&gt;记录Linux常用压缩解压命令:tar gzip zip&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell文本处理</title>
+      <link>https://nanjishidu.me/2017/03/linux-shell-text.html</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/linux-shell-text.html</guid>
+      <description>&lt;p&gt;记录Linux文本处理命令:grep,cut,sed,awk,paste,tac。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell文件</title>
+      <link>https://nanjishidu.me/2017/03/linux-shell-file.html</link>
+      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/linux-shell-file.html</guid>
+      <description>&lt;p&gt;记录Linux文件操作相关操作，包含文件创建，文件权限，查找，统计等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell常用命令</title>
+      <link>https://nanjishidu.me/2017/03/linux-shell-command.html</link>
+      <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/linux-shell-command.html</guid>
+      <description>&lt;p&gt;记录Linux常用shell命令：cat、find、xargs、split等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-shell基础</title>
+      <link>https://nanjishidu.me/2017/03/linux-shell-base.html</link>
+      <pubDate>Sat, 18 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/linux-shell-base.html</guid>
+      <description>&lt;p&gt;最近读 &lt;strong&gt;《linux脚本攻略》&amp;ndash;Sarath Lakshman&lt;/strong&gt; ，发现里面有很多有用的知识点，特记录备查。
+记录Linux基础，包含变量常量、数组、迭代等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派时间同步</title>
+      <link>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</link>
+      <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</guid>
+      <description>&lt;p&gt;树莓派没有硬件时钟，重启后时间就会重置，通过ntpdate命令进行时间同步。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac常用命令</title>
+      <link>https://nanjishidu.me/2017/03/mac-shell.html</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/mac-shell.html</guid>
+      <description>&lt;p&gt;使用mac两年多了，前两天看到同事使用了pdcopy和pbpaste觉得很好用，将常用的几个命令做下记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang生成二维码及相关条码介绍</title>
+      <link>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</guid>
+      <description>&lt;p&gt;最近业务需求需要通过golang生成二维码,研究了&lt;a href=&#34;https://github.com/boombuler/barcode&#34; target=&#34;_blank&#34;&gt;github.com/boombuler/barcode&lt;/a&gt;,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx添加密码访问</title>
+      <link>https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html</link>
+      <pubDate>Mon, 20 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/02/gophper-nginx-htpasswd.html</guid>
+      <description>&lt;p&gt;nginx通过 auth_basic和auth_basic_user_file配置密码保护。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx添加FancyIndex插件美化目录索引</title>
+      <link>https://nanjishidu.me/2017/02/gophper-nginx-fancy.html</link>
+      <pubDate>Sun, 19 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/02/gophper-nginx-fancy.html</guid>
+      <description>&lt;p&gt;配置域名&lt;a href=&#34;http://book.gophper.com&#34; target=&#34;_blank&#34;&gt;book.gophper.com&lt;/a&gt;,通过ssh隧道借助阿里云服务器实现公网访问。
+在nginx服务器配置目录浏览功能后发现样式不是很友好,需要添加FancyIndex插件,重新编译nginx。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker入门与实践</title>
+      <link>https://nanjishidu.me/2017/02/docker-run.html</link>
+      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/02/docker-run.html</guid>
+      <description>&lt;p&gt;参考&lt;a href=&#34;https://yeasy.gitbooks.io/docker_practice/content/&#34; target=&#34;_blank&#34;&gt;Docker — 从入门到实践&lt;/a&gt;,记录学习docker过程中常用命令和Dokcerfile编写。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>学习kafka</title>
+      <link>https://nanjishidu.me/2017/01/kafka.html</link>
+      <pubDate>Sat, 21 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/01/kafka.html</guid>
+      <description>&lt;p&gt;Apache Kafka是由Apache软件基金会开发的一个开源消息中间件项目，由Scala写成。
+Kafka是一种分布式的，基于发布/订阅的消息系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]centos7系统的改变</title>
+      <link>https://nanjishidu.me/2017/01/gophper-centos7.html</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2017/01/gophper-centos7.html</guid>
+      <description>&lt;p&gt;阿里云推出免费试用6个月的活动,申请了免费试用,切换到centos7后发现了一些改变。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>备份instagram照片</title>
+      <link>https://nanjishidu.me/2016/12/instagram.html</link>
+      <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/instagram.html</guid>
+      <description>&lt;p&gt;使用ins做日常的图片分享,但是ins不支持图片下载。搜索过全量备份软件,需要捐助才可以使用。最近刚好写过网站数据采集的代码,使用过PhantomJS(node),goquery(golang)等第三方包,因此自己动手实现了insta。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ss实现与国际接轨</title>
+      <link>https://nanjishidu.me/2016/12/ss.html</link>
+      <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/ss.html</guid>
+      <description>&lt;p&gt;访问google或者github等网站,因为成分不好,经常会拒之门外。
+经常需要搜索资料或者去官网下载和查看官方文档,如果拒之门外就会失去很多重要的资料。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>网站域名gophper.com替换为nanjishidu.me</title>
+      <link>https://nanjishidu.me/2016/12/gophper-nanjishidu.html</link>
+      <pubDate>Mon, 19 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/gophper-nanjishidu.html</guid>
+      <description>gophper.com是我的第一个域名，本来是用来做交流网站使用。前一阵开通博客后,手头没有合适的域名，就暂时使用它。
+现在nanjishidu.me已经备案成功，遂将博客域名替换。</description>
+    </item>
+    
+    <item>
+      <title>[gophper]给网站加把小绿锁</title>
+      <link>https://nanjishidu.me/2016/12/gophper-https.html</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/gophper-https.html</guid>
+      <description>&lt;p&gt;目前越来越多的网站开始支持https。&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Lets Encrypt&lt;/a&gt;提供免费的ssl证书服务,发现很多同学都在使用。
+最近阅读&lt;a href=&#34;https://undefinedblog.com/lets-encrypt/&#34;&gt;Lets Encrypt花三分钟免费接入ssl证书&lt;/a&gt;,
+发现已经有同学写了脚本进行证书获取，调用python写的acme_tiny。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]nginx日志配置</title>
+      <link>https://nanjishidu.me/2016/12/gophper-nginx-config.html</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/gophper-nginx-config.html</guid>
+      <description>&lt;p&gt;谷歌统计因为&lt;strong&gt;某些原因服务不是很友好&lt;/strong&gt;。现在统计分析主要依赖百度统计。。。
+本着学习的态度,对现有日志进行分析统计。
+数据分析可以发现网站自身问题同时可以了解不同地区的访问意向等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rsync同步</title>
+      <link>https://nanjishidu.me/2016/12/rsync-ssh.html</link>
+      <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/12/rsync-ssh.html</guid>
+      <description>&lt;p&gt;一直想为rsync写一篇文章。很久之前用过，被他强大的功能深深折服了。
+rsync是进行数据同步和备份的工具,支持增量文件传输。曾经在系统镜像备份脚本中看到使用它进行系统文件同步打包。
+但是它是明文传输的，没有直接支持加密传输。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派使用备忘</title>
+      <link>https://nanjishidu.me/2016/11/raspberry-init.html</link>
+      <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/11/raspberry-init.html</guid>
+      <description>&lt;p&gt;最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
+树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]阿里云服务器异常排查</title>
+      <link>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</link>
+      <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</guid>
+      <description>&lt;p&gt;早上通过手机访问博客失败，dig解析域名正常,ssh登录失败，telnet ssh端口正常，ping正常。登录阿里云管理后发现有一封欠费通知。
+此时可视化管理控制端无法打开。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang接口使用</title>
+      <link>https://nanjishidu.me/2016/09/golang-interface.html</link>
+      <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/09/golang-interface.html</guid>
+      <description>&lt;p&gt;interface类型定义了一组方法，如果某个对象实现了某个接口的所有方法，则此对象就实现了此接口&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用GitBook写书</title>
+      <link>https://nanjishidu.me/2016/06/gitbook.html</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/06/gitbook.html</guid>
+      <description>&lt;p&gt;gitbook基于node.js、markdown,生成pdf、mobi格式电子书。
+在本地搭建环境后,初始化构建,生成pdf,完美。。。
+特将方法做简单记录。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux常用命令[grep,awk,sed]</title>
+      <link>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</link>
+      <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</guid>
+      <description>&lt;p&gt;grep,awk,sed 主要用于文本处理,编辑查找分析。。。
+最近接手遗留项目，针对眼花撩乱的命名规则以及飞来飞去的方法调用，通过grep搜索方法，通过sed 规范方法名。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mysql数据备份恢复</title>
+      <link>https://nanjishidu.me/2016/03/mysql-backup.html</link>
+      <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/03/mysql-backup.html</guid>
+      <description>&lt;p&gt;常用两条mysql命令，用于数据库的备份和恢复。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用</title>
+      <link>https://nanjishidu.me/2016/03/git.html</link>
+      <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2016/03/git.html</guid>
+      <description>&lt;p&gt;Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos配置ftp服务</title>
+      <link>https://nanjishidu.me/2015/12/centos-ftp.html</link>
+      <pubDate>Mon, 28 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/12/centos-ftp.html</guid>
+      <description>&lt;p&gt;记录centos通过yum安装ftp。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac使用过程小技巧</title>
+      <link>https://nanjishidu.me/2015/08/mac-skill.html</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/08/mac-skill.html</guid>
+      <description>&lt;p&gt;mac下清除文件扩展属性,清除系统睡眠文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]服务器备份脚本</title>
+      <link>https://nanjishidu.me/2015/06/gophper-backup-shell.html</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/06/gophper-backup-shell.html</guid>
+      <description>&lt;p&gt;数据备份在任何时候都要记住,这一点我一直没有意识。&lt;/p&gt;
+
+&lt;p&gt;有一次公司的服务器宕机了，官网无法访问，公司老大通过备份数据恢复保障官网的正常运行。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置svn服务</title>
+      <link>https://nanjishidu.me/2015/06/gophper-svn.html</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/06/gophper-svn.html</guid>
+      <description>&lt;p&gt;centos配置安装svn服务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置mysql数据库</title>
+      <link>https://nanjishidu.me/2015/06/gophper-mysql.html</link>
+      <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/06/gophper-mysql.html</guid>
+      <description>&lt;p&gt;centos安装配置mysql数据库。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[gophper]配置iptables防火墙</title>
+      <link>https://nanjishidu.me/2015/06/gophper-iptables.html</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/06/gophper-iptables.html</guid>
+      <description>&lt;p&gt;阿里云为centos服务器,以下为防火墙规则备份,数据配置在/etc/sysconfig/iptables&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mac配置初始化部署</title>
+      <link>https://nanjishidu.me/2015/03/mac-init.html</link>
+      <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2015/03/mac-init.html</guid>
+      <description>&lt;p&gt;记录mac系统初始化安装过程。安装xcode，brew，go环境，php环境。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos网桥设置</title>
+      <link>https://nanjishidu.me/2014/12/centos-brctl-set.html</link>
+      <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/12/centos-brctl-set.html</guid>
+      <description>&lt;p&gt;记录centos下网桥配置过程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>snmpwalk使用</title>
+      <link>https://nanjishidu.me/2014/10/linux-snmpwalk.html</link>
+      <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/10/linux-snmpwalk.html</guid>
+      <description>&lt;p&gt;使用snmpwalk查看支持SNMP协议的设备的一些信息，如cisco交换机或路由器IP地址等，也可用来协助开发SNMP功能。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos中添加ftp用户</title>
+      <link>https://nanjishidu.me/2014/09/centos-ftp-user.html</link>
+      <pubDate>Tue, 02 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/09/centos-ftp-user.html</guid>
+      <description>&lt;p&gt;在linux中添加ftp用户，并设置相应的权限。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos安装redis2.8.19</title>
+      <link>https://nanjishidu.me/2014/07/centos-redis-init.html</link>
+      <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/07/centos-redis-init.html</guid>
+      <description>&lt;p&gt;记录运维部署redis过程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux下FTP上传下载</title>
+      <link>https://nanjishidu.me/2014/06/linux-ftp.html</link>
+      <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/06/linux-ftp.html</guid>
+      <description>&lt;p&gt;lftp实现文件上传下载。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu14.04安装初始化</title>
+      <link>https://nanjishidu.me/2014/06/ubuntu-init.html</link>
+      <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/06/ubuntu-init.html</guid>
+      <description>&lt;p&gt;记录ubuntu系统初始化安装过程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos安装postgres9.5</title>
+      <link>https://nanjishidu.me/2014/05/centos-postgres-init.html</link>
+      <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/05/centos-postgres-init.html</guid>
+      <description>&lt;p&gt;centos系统yum安装配置postgresql&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux配置crontab</title>
+      <link>https://nanjishidu.me/2014/04/linux-crontab.html</link>
+      <pubDate>Sat, 19 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/04/linux-crontab.html</guid>
+      <description>&lt;p&gt;crontab 执行定时任务。
+目前自己的应用部署在阿里云服务器和树莓派服务器上。
+重要的资料通过crontab调用脚本，每天定时备份到七牛云私密空间备份成功后删除七牛空间7天前的数据。保证数据的安全和七牛空间的持续可用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用arp拦截网络攻击</title>
+      <link>https://nanjishidu.me/2014/04/arp-protection.html</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2014/04/arp-protection.html</guid>
+      <description>&lt;p&gt;局域网内设备发送arp病毒包，误导设备对网关mac地址的解析。通过arp绑定mac地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>dig命令</title>
+      <link>https://nanjishidu.me/2013/08/dns-dig.html</link>
+      <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2013/08/dns-dig.html</guid>
+      <description>&lt;p&gt;dig命令提供DNS解析查询。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu安装bind9</title>
+      <link>https://nanjishidu.me/2013/07/ubuntu-bind9.html</link>
+      <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2013/07/ubuntu-bind9.html</guid>
+      <description>&lt;p&gt;记录ubuntu安装bind9及权威域名的配置过程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://nanjishidu.me/2013/01/about.html</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2013/01/about.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>友情链接</title>
+      <link>https://nanjishidu.me/2013/01/frend.html</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2013/01/frend.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
