@@ -6,10 +6,19 @@
     <description>Recent content on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanjishidu.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>windows开发环境配置</title>
+      <link>https://nanjishidu.me/2020/04/windows-development-environment-configuration.html</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanjishidu.me/2020/04/windows-development-environment-configuration.html</guid>
+      <description>&lt;p&gt;windows开发环境配置&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>mysql主从同步</title>

@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="nanjishidu">
 <meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
-<meta name="description" content="mysql主从同步配置">
+<meta name="description" content="windows开发环境配置">
 
 
-<meta property="og:description" content="mysql主从同步配置">
+<meta property="og:description" content="windows开发环境配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql主从同步">
-<meta name="twitter:title" content="mysql主从同步">
-<meta property="og:url" content="https://nanjishidu.me/2019/11/mysql-master-slave.html">
-<meta property="twitter:url" content="https://nanjishidu.me/2019/11/mysql-master-slave.html">
+<meta property="og:title" content="windows开发环境配置">
+<meta name="twitter:title" content="windows开发环境配置">
+<meta property="og:url" content="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
 <meta property="og:site_name" content="nanjishidu">
-<meta property="og:description" content="mysql主从同步配置">
-<meta name="twitter:description" content="mysql主从同步配置">
+<meta property="og:description" content="windows开发环境配置">
+<meta name="twitter:description" content="windows开发环境配置">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2019-11-29T00:00:00">
+    <meta property="article:published_time" content="2020-04-21T00:00:00">
   
   
-    <meta property="article:modified_time" content="2019-11-29T00:00:00">
+    <meta property="article:modified_time" content="2020-04-21T00:00:00">
   
   
   
@@ -36,7 +36,7 @@
   
   
     
-      <meta property="article:tag" content="mysql">
+      <meta property="article:tag" content="windows">
     
   
 
@@ -49,8 +49,8 @@
 
 
 
-  <meta property="og:image" content="https://nanjishidu.me/media/2019/1129.jpg">
-  <meta property="twitter:image" content="https://nanjishidu.me/media/2019/1129.jpg">
+  <meta property="og:image" content="https://nanjishidu.me/media/2020/0421.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2020/0421.jpg">
 
 
 
@@ -60,14 +60,14 @@
   <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
 
 
-    <title>mysql主从同步</title>
+    <title>windows开发环境配置</title>
 
     <link rel="icon" href="https://nanjishidu.me/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://nanjishidu.me/2019/11/mysql-master-slave.html">
+    <link rel="canonical" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -237,15 +237,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      mysql主从同步
+      windows开发环境配置
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-11-29T00:00:00Z">
+      <time itemprop="datePublished" datetime="2020-04-21T00:00:00Z">
         
-  November 29, 2019
+  April 21, 2020
 
       </time>
     
@@ -264,94 +264,83 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>mysql主从同步配置</p>
+              <p>windows开发环境配置</p>
 
-<h2 id="前言">前言</h2>
-
-<p>为了保障断网后业务正常运转，部署一台mysql从服务器在本地。最近几天不是很忙，在客户的测试服务器上搭建测试，记录。</p>
-
-<h2 id="1-mysql初始化">1.mysql初始化</h2>
+<h2 id="1-msys2-zsh-on-my-zsh-git-vim-shell-winpty">1. msys2 zsh on-my-zsh git vim shell winpty</h2>
 
 <ul>
-<li><p>保证大版本号统一</p></li>
+<li>进入msys2<a href="https://www.msys2.org/">官网</a>，安装msys2</li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/msys2/">修改源</a></li>
 
-<li><p>初始化，保证同步库或表数据一致</p></li>
+<li><p>使用pacman安装zsh git vim shell winpty</p>
 
-<li><p>测试版本5.7.18</p></li>
-</ul>
-
-<h2 id="2-主服务配置">2.主服务配置</h2>
-
-<ul>
-<li><p>修改/etc/mysql/my.cnf,添加</p>
-
-<pre><code>
-[mysqld]
-server-id=1
-#启用二进制日志
-log-bin=mysql-bin
-#复制的数据库名，如果复制多个数据库，使用逗号分割
-binlog-do-db=db201911
-sync_binlog=1
-
-</code></pre></li>
-
-<li><p>创建用户，并授权slave</p>
-
-<pre><code>grant replication slave on *.* to '用户名'@'主机' identified by '密码';
-</code></pre></li>
-
-<li><p>获取File和Position，这两个字段在从服务器配置使用</p>
-
-<pre><code>show master status;
+<pre><code>pacman -Sy zsh git vim shell winpty
 </code></pre></li>
 </ul>
 
-<h2 id="3-从服务器配置">3.从服务器配置</h2>
+<h2 id="2-修改c-msys64-msys2-shell-cmd">2. 修改C:\msys64\msys2_shell.cmd</h2>
 
 <ul>
-<li><p>修改/etc/mysql/my.cnf,添加</p>
+<li>修改<code>set &quot;LOGINSHELL=zsh&quot;</code></li>
+<li>取消注释<code>set MSYS=winsymlinks:nativestrict</code></li>
 
-<pre><code>[mysqld]
-server-id=2
-#启用二进制日志
-log-bin=mysql-bin
-#复制的数据库名，如果复制多个数据库，使用逗号分割
-#replicate-do-db=db201911
-#复制的数据表，如果复制多个数据表，使用逗号分割
-replicate-do-table=db201911.table1
+<li><p>取消注释<code>set MSYS2_PATH_TYPE=inherit</code></p>
+
+<pre><code>set &quot;LOGINSHELL=zsh&quot;
+set /a msys2_shiftCounter=0
+
+rem To activate windows native symlinks uncomment next line
+set MSYS=winsymlinks:nativestrict
+
+rem Set debugging program for errors
+rem set MSYS=error_start:%WD%../../mingw64/bin/qtcreator.exe^|-debug^|^&lt;process-id^&gt;
+
+rem To export full current PATH from environment into MSYS2 use '-use-full-path' parameter
+rem or uncomment next line
+set MSYS2_PATH_TYPE=inherit
+</code></pre></li>
+</ul>
+
+<h2 id="3-修改-zshrc配置-winpty解决ping输出乱码问题">3. 修改~/.zshrc配置，winpty解决ping输出乱码问题</h2>
+
+<pre><code>alias ping=&quot;/bin/winpty ping&quot;
+alias netstat=&quot;/bin/winpty netstat&quot;
+alias nslookup=&quot;/bin/winpty nslookup&quot;
+alias open=&quot;shell&quot;
+</code></pre>
+
+<h2 id="4-解决on-my-zsh打开git目录卡顿-慢的问题">4. 解决on-my-zsh打开git目录卡顿、慢的问题</h2>
+
+<pre><code>git config --global --add on-my-zsh.hide-dirty 1
+git config  --global --add on-my-zsh.hide-status 1
+
+取消置为1
+</code></pre>
+
+<h2 id="5-解决vscode源码管理器git不工作问题">5. 解决vscode源码管理器git不工作问题</h2>
+
+<ul>
+<li><p>在/usr/bin/下面新建git-vscode.bat</p>
+
+<pre><code>@echo off
+setlocal
+
+rem If you don't add path for msys2 into %PATH%, enable following line.
+set PATH=c:\msys64\usr\bin;%PATH%
+
+if &quot;%1&quot; equ &quot;rev-parse&quot; goto rev_parse
+git %*
+goto :eof
+:rev_parse
+for /f %%1 in ('git %*') do cygpath -w %%1% 
 </code></pre></li>
 
-<li><p>停止正在进行的slave</p>
+<li><p>修改setting.json</p>
 
-<pre><code>stop slave;
+<pre><code>&quot;git.path&quot;: &quot;c:/msys64/usr/bin/git-vscode.bat&quot;,
 </code></pre></li>
 
-<li><p>重置slave</p>
-
-<pre><code>reset slave;
-</code></pre></li>
-
-<li><p>配置从服务器slave</p>
-
-<pre><code>CHANGE MASTER TO MASTER_HOST='数据库地址',MASTER_PORT=数据库端口,MASTER_USER='数据库用户名',MASTER_PASSWORD='数据库密码',MASTER_LOG_FILE='主服务器获取的File',MASTER_LOG_POS=主服务器获取的Position;
-</code></pre></li>
-
-<li><p>启动slave</p>
-
-<pre><code>start slave;
-</code></pre></li>
-
-<li><p>查看状态</p>
-
-<pre><code>show slave status;
-
-如果状态为yes表示开启成功。
-
-Slave_IO_Running: Yes 
-Slave_SQL_Running: Yes
-
-</code></pre></li>
+<li><p>重启vscode</p></li>
 </ul>
               
             </div>
@@ -364,7 +353,7 @@ Slave_SQL_Running: Yes
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/mysql.html">mysql</a>
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/windows.html">windows</a>
 
                   </div>
                 
@@ -377,7 +366,7 @@ Slave_SQL_Running: Yes
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html" data-tooltip="windows开发环境配置">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -385,7 +374,7 @@ Slave_SQL_Running: Yes
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/09/blog-update.html" data-tooltip="博客升级">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/11/mysql-master-slave.html" data-tooltip="mysql主从同步">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -445,7 +434,7 @@ Slave_SQL_Running: Yes
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html" data-tooltip="windows开发环境配置">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -453,7 +442,7 @@ Slave_SQL_Running: Yes
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/09/blog-update.html" data-tooltip="博客升级">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/11/mysql-master-slave.html" data-tooltip="mysql主从同步">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -592,9 +581,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/nanjishidu.me\/2019\/11\/mysql-master-slave.html';
+          this.page.url = 'https:\/\/nanjishidu.me\/2020\/04\/windows-development-environment-configuration.html';
           
-            this.page.identifier = '\/2019\/11\/mysql-master-slave.html'
+            this.page.identifier = '\/2020\/04\/windows-development-environment-configuration.html'
           
         };
         (function() {
