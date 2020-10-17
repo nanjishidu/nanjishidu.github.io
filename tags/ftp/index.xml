@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ftp on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/ftp.html</link>
+    <link>https://nanjishidu.gophper.com/tags/ftp.html</link>
     <description>Recent content in ftp on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Dec 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>centos配置ftp服务</title>
-      <link>https://nanjishidu.me/2015/12/centos-ftp.html</link>
+      <link>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</link>
       <pubDate>Mon, 28 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/12/centos-ftp.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</guid>
       <description>&lt;p&gt;记录centos通过yum安装ftp。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos中添加ftp用户</title>
-      <link>https://nanjishidu.me/2014/09/centos-ftp-user.html</link>
+      <link>https://nanjishidu.gophper.com/2014/09/centos-ftp-user.html</link>
       <pubDate>Tue, 02 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/09/centos-ftp-user.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/09/centos-ftp-user.html</guid>
       <description>&lt;p&gt;在linux中添加ftp用户，并设置相应的权限。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux下FTP上传下载</title>
-      <link>https://nanjishidu.me/2014/06/linux-ftp.html</link>
+      <link>https://nanjishidu.gophper.com/2014/06/linux-ftp.html</link>
       <pubDate>Fri, 06 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/06/linux-ftp.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/06/linux-ftp.html</guid>
       <description>&lt;p&gt;lftp实现文件上传下载。&lt;/p&gt;</description>
     </item>
     

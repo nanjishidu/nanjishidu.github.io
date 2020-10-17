@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shadowsocks on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/shadowsocks.html</link>
+    <link>https://nanjishidu.gophper.com/tags/shadowsocks.html</link>
     <description>Recent content in shadowsocks on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ss实现与国际接轨</title>
-      <link>https://nanjishidu.me/2016/12/ss.html</link>
+      <link>https://nanjishidu.gophper.com/2016/12/ss.html</link>
       <pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/12/ss.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/12/ss.html</guid>
       <description>&lt;p&gt;访问google或者github等网站,因为成分不好,经常会拒之门外。
 经常需要搜索资料或者去官网下载和查看官方文档,如果拒之门外就会失去很多重要的资料。&lt;/p&gt;</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lsof on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/lsof.html</link>
+    <link>https://nanjishidu.gophper.com/tags/lsof.html</link>
     <description>Recent content in lsof on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Nov 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/lsof/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/lsof/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>查询网络接口占用</title>
-      <link>https://nanjishidu.me/2018/11/netstat-lsof.html</link>
+      <link>https://nanjishidu.gophper.com/2018/11/netstat-lsof.html</link>
       <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2018/11/netstat-lsof.html</guid>
+      <guid>https://nanjishidu.gophper.com/2018/11/netstat-lsof.html</guid>
       <description>&lt;p&gt;通过netstat或者lsof查询网络接口占用&lt;/p&gt;</description>
     </item>
     

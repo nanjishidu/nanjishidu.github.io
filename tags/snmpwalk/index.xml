@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>snmpwalk on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/snmpwalk.html</link>
+    <link>https://nanjishidu.gophper.com/tags/snmpwalk.html</link>
     <description>Recent content in snmpwalk on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 12 Oct 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/snmpwalk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/snmpwalk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>snmpwalk使用</title>
-      <link>https://nanjishidu.me/2014/10/linux-snmpwalk.html</link>
+      <link>https://nanjishidu.gophper.com/2014/10/linux-snmpwalk.html</link>
       <pubDate>Sun, 12 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/10/linux-snmpwalk.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/10/linux-snmpwalk.html</guid>
       <description>&lt;p&gt;使用snmpwalk查看支持SNMP协议的设备的一些信息，如cisco交换机或路由器IP地址等，也可用来协助开发SNMP功能。&lt;/p&gt;</description>
     </item>
     

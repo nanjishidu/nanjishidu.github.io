@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>微信支付 on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.html</link>
+    <link>https://nanjishidu.gophper.com/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.html</link>
     <description>Recent content in 微信支付 on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微信支付(退款结果通知)golang AES-256-ECB解密</title>
-      <link>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</link>
+      <link>https://nanjishidu.gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</link>
       <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
       <description>&lt;p&gt;处理微信支付退款结果通知时，需要对返回数据进行AES-256-ECB解密，golang标准库未支持AES ECB加解密，特此记录。&lt;/p&gt;</description>
     </item>
     

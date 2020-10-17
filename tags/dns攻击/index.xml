@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DNS攻击 on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/dns%E6%94%BB%E5%87%BB.html</link>
+    <link>https://nanjishidu.gophper.com/tags/dns%E6%94%BB%E5%87%BB.html</link>
     <description>Recent content in DNS攻击 on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 09 Nov 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/dns%E6%94%BB%E5%87%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/dns%E6%94%BB%E5%87%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]阿里云服务器异常排查</title>
-      <link>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</link>
+      <link>https://nanjishidu.gophper.com/2016/11/gophper-aliyun-fault.html</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/11/gophper-aliyun-fault.html</guid>
       <description>&lt;p&gt;早上通过手机访问博客失败，dig解析域名正常,ssh登录失败，telnet ssh端口正常，ping正常。登录阿里云管理后发现有一封欠费通知。
 此时可视化管理控制端无法打开。。。&lt;/p&gt;</description>
     </item>

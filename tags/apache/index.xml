@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>apache on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/apache.html</link>
+    <link>https://nanjishidu.gophper.com/tags/apache.html</link>
     <description>Recent content in apache on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/apache/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mac配置初始化部署</title>
-      <link>https://nanjishidu.me/2015/03/mac-init.html</link>
+      <link>https://nanjishidu.gophper.com/2015/03/mac-init.html</link>
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/03/mac-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/03/mac-init.html</guid>
       <description>&lt;p&gt;记录mac系统初始化安装过程。安装xcode，brew，go环境，php环境。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ubuntu14.04安装初始化</title>
-      <link>https://nanjishidu.me/2014/06/ubuntu-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/06/ubuntu-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</guid>
       <description>&lt;p&gt;记录ubuntu系统初始化安装过程。&lt;/p&gt;</description>
     </item>
     

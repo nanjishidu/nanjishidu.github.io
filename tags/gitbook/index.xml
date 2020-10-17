@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gitbook on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/gitbook.html</link>
+    <link>https://nanjishidu.gophper.com/tags/gitbook.html</link>
     <description>Recent content in gitbook on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Jun 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/gitbook/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/gitbook/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用GitBook写书</title>
-      <link>https://nanjishidu.me/2016/06/gitbook.html</link>
+      <link>https://nanjishidu.gophper.com/2016/06/gitbook.html</link>
       <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/06/gitbook.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/06/gitbook.html</guid>
       <description>&lt;p&gt;gitbook基于node.js、markdown,生成pdf、mobi格式电子书。
 在本地搭建环境后,初始化构建,生成pdf,完美。。。
 特将方法做简单记录。。。&lt;/p&gt;</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bind9 on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/bind9.html</link>
+    <link>https://nanjishidu.gophper.com/tags/bind9.html</link>
     <description>Recent content in bind9 on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Jul 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/bind9/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/bind9/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ubuntu安装bind9</title>
-      <link>https://nanjishidu.me/2013/07/ubuntu-bind9.html</link>
+      <link>https://nanjishidu.gophper.com/2013/07/ubuntu-bind9.html</link>
       <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2013/07/ubuntu-bind9.html</guid>
+      <guid>https://nanjishidu.gophper.com/2013/07/ubuntu-bind9.html</guid>
       <description>&lt;p&gt;记录ubuntu安装bind9及权威域名的配置过程。&lt;/p&gt;</description>
     </item>
     

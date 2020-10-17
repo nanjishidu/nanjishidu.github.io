@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/git.html</link>
+    <link>https://nanjishidu.gophper.com/tags/git.html</link>
     <description>Recent content in git on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>搭建本地的gitea</title>
-      <link>https://nanjishidu.me/2017/07/gitea.html</link>
+      <link>https://nanjishidu.gophper.com/2017/07/gitea.html</link>
       <pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/07/gitea.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/07/gitea.html</guid>
       <description>&lt;p&gt;在某种机缘下，结识了&lt;a href=&#34;https://gitea.io/zh-CN/&#34; target=&#34;_blank&#34;&gt;gitea&lt;/a&gt;。golang开发，部署简单，搭建在本地树莓派服务器中使用。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>git使用</title>
-      <link>https://nanjishidu.me/2016/03/git.html</link>
+      <link>https://nanjishidu.gophper.com/2016/03/git.html</link>
       <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/03/git.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/03/git.html</guid>
       <description>&lt;p&gt;Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。&lt;/p&gt;</description>
     </item>
     

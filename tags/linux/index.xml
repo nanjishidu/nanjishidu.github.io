@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/linux.html</link>
+    <link>https://nanjishidu.gophper.com/tags/linux.html</link>
     <description>Recent content in linux on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux和macOS下top命令区别</title>
-      <link>https://nanjishidu.me/2019/03/linux-mac-top.html</link>
+      <link>https://nanjishidu.gophper.com/2019/03/linux-mac-top.html</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2019/03/linux-mac-top.html</guid>
+      <guid>https://nanjishidu.gophper.com/2019/03/linux-mac-top.html</guid>
       <description>&lt;p&gt;top命令是常用的性能分析工具，被广泛用于监视服务器的负载，能够实时显示系统中各个进程的资源占用情况。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux常用命令[grep,awk,sed]</title>
-      <link>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</link>
+      <link>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</link>
       <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</guid>
       <description>&lt;p&gt;grep,awk,sed 主要用于文本处理,编辑查找分析。。。
 最近接手遗留项目，针对眼花撩乱的命名规则以及飞来飞去的方法调用，通过grep搜索方法，通过sed 规范方法名。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos配置ftp服务</title>
-      <link>https://nanjishidu.me/2015/12/centos-ftp.html</link>
+      <link>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</link>
       <pubDate>Mon, 28 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/12/centos-ftp.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</guid>
       <description>&lt;p&gt;记录centos通过yum安装ftp。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos网桥设置</title>
-      <link>https://nanjishidu.me/2014/12/centos-brctl-set.html</link>
+      <link>https://nanjishidu.gophper.com/2014/12/centos-brctl-set.html</link>
       <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/12/centos-brctl-set.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/12/centos-brctl-set.html</guid>
       <description>&lt;p&gt;记录centos下网桥配置过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos安装redis2.8.19</title>
-      <link>https://nanjishidu.me/2014/07/centos-redis-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/07/centos-redis-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</guid>
       <description>&lt;p&gt;记录运维部署redis过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ubuntu14.04安装初始化</title>
-      <link>https://nanjishidu.me/2014/06/ubuntu-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/06/ubuntu-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</guid>
       <description>&lt;p&gt;记录ubuntu系统初始化安装过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos安装postgres9.5</title>
-      <link>https://nanjishidu.me/2014/05/centos-postgres-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</link>
       <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/05/centos-postgres-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</guid>
       <description>&lt;p&gt;centos系统yum安装配置postgresql&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux配置crontab</title>
-      <link>https://nanjishidu.me/2014/04/linux-crontab.html</link>
+      <link>https://nanjishidu.gophper.com/2014/04/linux-crontab.html</link>
       <pubDate>Sat, 19 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/04/linux-crontab.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/04/linux-crontab.html</guid>
       <description>&lt;p&gt;crontab 执行定时任务。
 目前自己的应用部署在阿里云服务器和树莓派服务器上。
 重要的资料通过crontab调用脚本，每天定时备份到七牛云私密空间备份成功后删除七牛空间7天前的数据。保证数据的安全和七牛空间的持续可用。&lt;/p&gt;</description>

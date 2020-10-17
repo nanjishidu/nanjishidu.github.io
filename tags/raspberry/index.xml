@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>raspberry on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/raspberry.html</link>
+    <link>https://nanjishidu.gophper.com/tags/raspberry.html</link>
     <description>Recent content in raspberry on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>raspberry pi zero体验</title>
-      <link>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</link>
+      <link>https://nanjishidu.gophper.com/2018/04/raspberry-pi-zero.html</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</guid>
+      <guid>https://nanjishidu.gophper.com/2018/04/raspberry-pi-zero.html</guid>
       <description>&lt;p&gt;入手pi zero w，体验最小型主板&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>树莓派时间同步</title>
-      <link>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/raspberry-ntpdate.html</link>
       <pubDate>Fri, 17 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/raspberry-ntpdate.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/raspberry-ntpdate.html</guid>
       <description>&lt;p&gt;树莓派没有硬件时钟，重启后时间就会重置，通过ntpdate命令进行时间同步。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>树莓派使用备忘</title>
-      <link>https://nanjishidu.me/2016/11/raspberry-init.html</link>
+      <link>https://nanjishidu.gophper.com/2016/11/raspberry-init.html</link>
       <pubDate>Thu, 17 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/11/raspberry-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/11/raspberry-init.html</guid>
       <description>&lt;p&gt;最近购置树莓派3，新版支持无线和蓝牙。部署lite版本做家用服务器使用，使用32Gtf卡做存储.
 树莓派在家里做服务器使用，通过阿里云服务器做ssh隧道访问。&lt;/p&gt;</description>
     </item>

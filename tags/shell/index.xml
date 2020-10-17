@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shell on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/shell.html</link>
+    <link>https://nanjishidu.gophper.com/tags/shell.html</link>
     <description>Recent content in shell on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 22 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux-shell压缩解压</title>
-      <link>https://nanjishidu.me/2017/03/linux-shell-compress.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/linux-shell-compress.html</link>
       <pubDate>Wed, 22 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/linux-shell-compress.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/linux-shell-compress.html</guid>
       <description>&lt;p&gt;记录Linux常用压缩解压命令:tar gzip zip&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-shell文本处理</title>
-      <link>https://nanjishidu.me/2017/03/linux-shell-text.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/linux-shell-text.html</link>
       <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/linux-shell-text.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/linux-shell-text.html</guid>
       <description>&lt;p&gt;记录Linux文本处理命令:grep,cut,sed,awk,paste,tac。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-shell文件</title>
-      <link>https://nanjishidu.me/2017/03/linux-shell-file.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/linux-shell-file.html</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/linux-shell-file.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/linux-shell-file.html</guid>
       <description>&lt;p&gt;记录Linux文件操作相关操作，包含文件创建，文件权限，查找，统计等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-shell常用命令</title>
-      <link>https://nanjishidu.me/2017/03/linux-shell-command.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/linux-shell-command.html</link>
       <pubDate>Sun, 19 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/linux-shell-command.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/linux-shell-command.html</guid>
       <description>&lt;p&gt;记录Linux常用shell命令：cat、find、xargs、split等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-shell基础</title>
-      <link>https://nanjishidu.me/2017/03/linux-shell-base.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/linux-shell-base.html</link>
       <pubDate>Sat, 18 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/linux-shell-base.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/linux-shell-base.html</guid>
       <description>&lt;p&gt;最近读 &lt;strong&gt;《linux脚本攻略》&amp;ndash;Sarath Lakshman&lt;/strong&gt; ，发现里面有很多有用的知识点，特记录备查。
 记录Linux基础，包含变量常量、数组、迭代等。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>mac常用命令</title>
-      <link>https://nanjishidu.me/2017/03/mac-shell.html</link>
+      <link>https://nanjishidu.gophper.com/2017/03/mac-shell.html</link>
       <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/03/mac-shell.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/03/mac-shell.html</guid>
       <description>&lt;p&gt;使用mac两年多了，前两天看到同事使用了pdcopy和pbpaste觉得很好用，将常用的几个命令做下记录。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux常用命令[grep,awk,sed]</title>
-      <link>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</link>
+      <link>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</link>
       <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</guid>
       <description>&lt;p&gt;grep,awk,sed 主要用于文本处理,编辑查找分析。。。
 最近接手遗留项目，针对眼花撩乱的命名规则以及飞来飞去的方法调用，通过grep搜索方法，通过sed 规范方法名。。。&lt;/p&gt;</description>
     </item>

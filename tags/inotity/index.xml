@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>inotity on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/inotity.html</link>
+    <link>https://nanjishidu.gophper.com/tags/inotity.html</link>
     <description>Recent content in inotity on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/inotity/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/inotity/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sersync基于rsync&#43;inotify实现数据实时同步</title>
-      <link>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</link>
+      <link>https://nanjishidu.gophper.com/2018/01/sersync-rsync-inotity.html</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</guid>
+      <guid>https://nanjishidu.gophper.com/2018/01/sersync-rsync-inotity.html</guid>
       <description>&lt;p&gt;最近有监听文件变化进行实时同步的需求，选用sersync实现数据实时同步&lt;/p&gt;</description>
     </item>
     

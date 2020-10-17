@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wifi on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/wifi.html</link>
+    <link>https://nanjishidu.gophper.com/tags/wifi.html</link>
     <description>Recent content in wifi on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Apr 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>raspberry pi zero体验</title>
-      <link>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</link>
+      <link>https://nanjishidu.gophper.com/2018/04/raspberry-pi-zero.html</link>
       <pubDate>Wed, 04 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2018/04/raspberry-pi-zero.html</guid>
+      <guid>https://nanjishidu.gophper.com/2018/04/raspberry-pi-zero.html</guid>
       <description>&lt;p&gt;入手pi zero w，体验最小型主板&lt;/p&gt;</description>
     </item>
     

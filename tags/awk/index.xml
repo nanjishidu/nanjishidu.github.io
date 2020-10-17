@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>awk on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/awk.html</link>
+    <link>https://nanjishidu.gophper.com/tags/awk.html</link>
     <description>Recent content in awk on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/awk/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/awk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux常用命令[grep,awk,sed]</title>
-      <link>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</link>
+      <link>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</link>
       <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/04/linux-grep-awk-sed.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/04/linux-grep-awk-sed.html</guid>
       <description>&lt;p&gt;grep,awk,sed 主要用于文本处理,编辑查找分析。。。
 最近接手遗留项目，针对眼花撩乱的命名规则以及飞来飞去的方法调用，通过grep搜索方法，通过sed 规范方法名。。。&lt;/p&gt;</description>
     </item>

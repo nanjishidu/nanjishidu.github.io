@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gophper on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/gophper.html</link>
+    <link>https://nanjishidu.gophper.com/tags/gophper.html</link>
     <description>Recent content in gophper on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Dec 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/gophper/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/gophper/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]给网站加把小绿锁</title>
-      <link>https://nanjishidu.me/2016/12/gophper-https.html</link>
+      <link>https://nanjishidu.gophper.com/2016/12/gophper-https.html</link>
       <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/12/gophper-https.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/12/gophper-https.html</guid>
       <description>&lt;p&gt;目前越来越多的网站开始支持https。&lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Lets Encrypt&lt;/a&gt;提供免费的ssl证书服务,发现很多同学都在使用。
 最近阅读&lt;a href=&#34;https://undefinedblog.com/lets-encrypt/&#34;&gt;Lets Encrypt花三分钟免费接入ssl证书&lt;/a&gt;,
 发现已经有同学写了脚本进行证书获取，调用python写的acme_tiny。&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     
     <item>
       <title>[gophper]nginx日志配置</title>
-      <link>https://nanjishidu.me/2016/12/gophper-nginx-config.html</link>
+      <link>https://nanjishidu.gophper.com/2016/12/gophper-nginx-config.html</link>
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/12/gophper-nginx-config.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/12/gophper-nginx-config.html</guid>
       <description>&lt;p&gt;谷歌统计因为&lt;strong&gt;某些原因服务不是很友好&lt;/strong&gt;。现在统计分析主要依赖百度统计。。。
 本着学习的态度,对现有日志进行分析统计。
 数据分析可以发现网站自身问题同时可以了解不同地区的访问意向等。&lt;/p&gt;</description>
@@ -35,20 +35,20 @@
     
     <item>
       <title>[gophper]阿里云服务器异常排查</title>
-      <link>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</link>
+      <link>https://nanjishidu.gophper.com/2016/11/gophper-aliyun-fault.html</link>
       <pubDate>Wed, 09 Nov 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/11/gophper-aliyun-fault.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/11/gophper-aliyun-fault.html</guid>
       <description>&lt;p&gt;早上通过手机访问博客失败，dig解析域名正常,ssh登录失败，telnet ssh端口正常，ping正常。登录阿里云管理后发现有一封欠费通知。
 此时可视化管理控制端无法打开。。。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]服务器备份脚本</title>
-      <link>https://nanjishidu.me/2015/06/gophper-backup-shell.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-backup-shell.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</guid>
       <description>&lt;p&gt;数据备份在任何时候都要记住,这一点我一直没有意识。&lt;/p&gt;
 
 &lt;p&gt;有一次公司的服务器宕机了，官网无法访问，公司老大通过备份数据恢复保障官网的正常运行。&lt;/p&gt;</description>
@@ -56,28 +56,28 @@
     
     <item>
       <title>[gophper]配置svn服务</title>
-      <link>https://nanjishidu.me/2015/06/gophper-svn.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-svn.html</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-svn.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-svn.html</guid>
       <description>&lt;p&gt;centos配置安装svn服务。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]配置mysql数据库</title>
-      <link>https://nanjishidu.me/2015/06/gophper-mysql.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-mysql.html</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-mysql.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-mysql.html</guid>
       <description>&lt;p&gt;centos安装配置mysql数据库。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]配置iptables防火墙</title>
-      <link>https://nanjishidu.me/2015/06/gophper-iptables.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</link>
       <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-iptables.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</guid>
       <description>&lt;p&gt;阿里云为centos服务器,以下为防火墙规则备份,数据配置在/etc/sysconfig/iptables&lt;/p&gt;</description>
     </item>
     

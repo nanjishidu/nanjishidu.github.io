@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rsync on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/rsync.html</link>
+    <link>https://nanjishidu.gophper.com/tags/rsync.html</link>
     <description>Recent content in rsync on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/rsync/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/rsync/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sersync基于rsync&#43;inotify实现数据实时同步</title>
-      <link>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</link>
+      <link>https://nanjishidu.gophper.com/2018/01/sersync-rsync-inotity.html</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2018/01/sersync-rsync-inotity.html</guid>
+      <guid>https://nanjishidu.gophper.com/2018/01/sersync-rsync-inotity.html</guid>
       <description>&lt;p&gt;最近有监听文件变化进行实时同步的需求，选用sersync实现数据实时同步&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>rsync同步</title>
-      <link>https://nanjishidu.me/2016/12/rsync-ssh.html</link>
+      <link>https://nanjishidu.gophper.com/2016/12/rsync-ssh.html</link>
       <pubDate>Mon, 05 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2016/12/rsync-ssh.html</guid>
+      <guid>https://nanjishidu.gophper.com/2016/12/rsync-ssh.html</guid>
       <description>&lt;p&gt;一直想为rsync写一篇文章。很久之前用过，被他强大的功能深深折服了。
 rsync是进行数据同步和备份的工具,支持增量文件传输。曾经在系统镜像备份脚本中看到使用它进行系统文件同步打包。
 但是它是明文传输的，没有直接支持加密传输。&lt;/p&gt;</description>

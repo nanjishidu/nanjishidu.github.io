@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>centos on nanjishidu</title>
-    <link>https://nanjishidu.me/tags/centos.html</link>
+    <link>https://nanjishidu.gophper.com/tags/centos.html</link>
     <description>Recent content in centos on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Apr 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.me/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.gophper.com/tags/centos/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]centos关闭selinux</title>
-      <link>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</link>
+      <link>https://nanjishidu.gophper.com/2017/04/gophper-centos-selinux.html</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/04/gophper-centos-selinux.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/04/gophper-centos-selinux.html</guid>
       <description>&lt;p&gt;centos selinux默认是启用状态。selinux可能会影响服务器服务，如php，建议关闭。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]服务器新旅程(virmach-vps-bbr)</title>
-      <link>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</link>
+      <link>https://nanjishidu.gophper.com/2017/04/gophper-virmach-vps-bbr.html</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/04/gophper-virmach-vps-bbr.html</guid>
       <description>&lt;p&gt;谷歌开源TCP BBR拥塞控制算法,并提交了linux内核,最新的 4.10 版内核已经用上了该算法。部署后测试后，网速提升了很多。采用virmach西雅图机房服务器进行测试,部署centos7。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]centos7系统的改变</title>
-      <link>https://nanjishidu.me/2017/01/gophper-centos7.html</link>
+      <link>https://nanjishidu.gophper.com/2017/01/gophper-centos7.html</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2017/01/gophper-centos7.html</guid>
+      <guid>https://nanjishidu.gophper.com/2017/01/gophper-centos7.html</guid>
       <description>&lt;p&gt;阿里云推出免费试用6个月的活动,申请了免费试用,切换到centos7后发现了一些改变。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos配置ftp服务</title>
-      <link>https://nanjishidu.me/2015/12/centos-ftp.html</link>
+      <link>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</link>
       <pubDate>Mon, 28 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/12/centos-ftp.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/12/centos-ftp.html</guid>
       <description>&lt;p&gt;记录centos通过yum安装ftp。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]服务器备份脚本</title>
-      <link>https://nanjishidu.me/2015/06/gophper-backup-shell.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-backup-shell.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</guid>
       <description>&lt;p&gt;数据备份在任何时候都要记住,这一点我一直没有意识。&lt;/p&gt;
 
 &lt;p&gt;有一次公司的服务器宕机了，官网无法访问，公司老大通过备份数据恢复保障官网的正常运行。&lt;/p&gt;</description>
@@ -60,55 +60,55 @@
     
     <item>
       <title>[gophper]配置svn服务</title>
-      <link>https://nanjishidu.me/2015/06/gophper-svn.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-svn.html</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-svn.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-svn.html</guid>
       <description>&lt;p&gt;centos配置安装svn服务。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]配置mysql数据库</title>
-      <link>https://nanjishidu.me/2015/06/gophper-mysql.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-mysql.html</link>
       <pubDate>Sun, 14 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-mysql.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-mysql.html</guid>
       <description>&lt;p&gt;centos安装配置mysql数据库。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]配置iptables防火墙</title>
-      <link>https://nanjishidu.me/2015/06/gophper-iptables.html</link>
+      <link>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</link>
       <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2015/06/gophper-iptables.html</guid>
+      <guid>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</guid>
       <description>&lt;p&gt;阿里云为centos服务器,以下为防火墙规则备份,数据配置在/etc/sysconfig/iptables&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos网桥设置</title>
-      <link>https://nanjishidu.me/2014/12/centos-brctl-set.html</link>
+      <link>https://nanjishidu.gophper.com/2014/12/centos-brctl-set.html</link>
       <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/12/centos-brctl-set.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/12/centos-brctl-set.html</guid>
       <description>&lt;p&gt;记录centos下网桥配置过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos安装redis2.8.19</title>
-      <link>https://nanjishidu.me/2014/07/centos-redis-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/07/centos-redis-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</guid>
       <description>&lt;p&gt;记录运维部署redis过程。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos安装postgres9.5</title>
-      <link>https://nanjishidu.me/2014/05/centos-postgres-init.html</link>
+      <link>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</link>
       <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.me/2014/05/centos-postgres-init.html</guid>
+      <guid>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</guid>
       <description>&lt;p&gt;centos系统yum安装配置postgresql&lt;/p&gt;</description>
     </item>
     
