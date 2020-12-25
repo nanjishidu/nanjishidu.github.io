@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>.gitignore on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/.gitignore.html</link>
+    <link>https://nanjishidu.me/tags/.gitignore.html</link>
     <description>Recent content in .gitignore on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/.gitignore/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/.gitignore/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>编写.gitignore</title>
-      <link>https://nanjishidu.gophper.com/2017/05/git-gitignore.html</link>
+      <link>https://nanjishidu.me/2017/05/git-gitignore.html</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/05/git-gitignore.html</guid>
+      <guid>https://nanjishidu.me/2017/05/git-gitignore.html</guid>
       <description>&lt;p&gt;git提交的时候需要将一些文件或者目录过滤掉,比如程序编译后的文件,macos隐藏文件等。
 使用.gitnore可以解决这类问题，做简要记录。&lt;/p&gt;</description>
     </item>

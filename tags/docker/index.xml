@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/docker.html</link>
+    <link>https://nanjishidu.me/tags/docker.html</link>
     <description>Recent content in docker on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>docker构建redis集群测试环境</title>
-      <link>https://nanjishidu.gophper.com/2017/05/docker-redis.html</link>
+      <link>https://nanjishidu.me/2017/05/docker-redis.html</link>
       <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/05/docker-redis.html</guid>
+      <guid>https://nanjishidu.me/2017/05/docker-redis.html</guid>
       <description>&lt;p&gt;因为业务需求，最近需要部署redis主从集群进行测试。正好最近在研究docker，发现docker配置redis集群特别方便迅速。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>docker入门与实践</title>
-      <link>https://nanjishidu.gophper.com/2017/02/docker-run.html</link>
+      <link>https://nanjishidu.me/2017/02/docker-run.html</link>
       <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/02/docker-run.html</guid>
+      <guid>https://nanjishidu.me/2017/02/docker-run.html</guid>
       <description>&lt;p&gt;参考&lt;a href=&#34;https://yeasy.gitbooks.io/docker_practice/content/&#34; target=&#34;_blank&#34;&gt;Docker — 从入门到实践&lt;/a&gt;,记录学习docker过程中常用命令和Dokcerfile编写。&lt;/p&gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>glide on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/glide.html</link>
+    <link>https://nanjishidu.me/tags/glide.html</link>
     <description>Recent content in glide on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/glide/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/glide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Glide:Package Management for Golang</title>
-      <link>https://nanjishidu.gophper.com/2017/05/golang-glide-vendor.html</link>
+      <link>https://nanjishidu.me/2017/05/golang-glide-vendor.html</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/05/golang-glide-vendor.html</guid>
+      <guid>https://nanjishidu.me/2017/05/golang-glide-vendor.html</guid>
       <description>&lt;p&gt;glide是golang的一个包管理工具。入门使用比较简单，使用过一段时间。随着第三方包增多,结构复杂后，发现对glide的理解并不深入，花时间整理下&lt;/p&gt;</description>
     </item>
     

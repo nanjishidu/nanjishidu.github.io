@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>postgresql on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/postgresql.html</link>
+    <link>https://nanjishidu.me/tags/postgresql.html</link>
     <description>Recent content in postgresql on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 May 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>centos安装postgres9.5</title>
-      <link>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</link>
+      <link>https://nanjishidu.me/2014/05/centos-postgres-init.html</link>
       <pubDate>Sat, 03 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2014/05/centos-postgres-init.html</guid>
+      <guid>https://nanjishidu.me/2014/05/centos-postgres-init.html</guid>
       <description>&lt;p&gt;centos系统yum安装配置postgresql&lt;/p&gt;</description>
     </item>
     

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>redis on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/redis.html</link>
+    <link>https://nanjishidu.me/tags/redis.html</link>
     <description>Recent content in redis on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 May 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>docker构建redis集群测试环境</title>
-      <link>https://nanjishidu.gophper.com/2017/05/docker-redis.html</link>
+      <link>https://nanjishidu.me/2017/05/docker-redis.html</link>
       <pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/05/docker-redis.html</guid>
+      <guid>https://nanjishidu.me/2017/05/docker-redis.html</guid>
       <description>&lt;p&gt;因为业务需求，最近需要部署redis主从集群进行测试。正好最近在研究docker，发现docker配置redis集群特别方便迅速。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>centos安装redis2.8.19</title>
-      <link>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</link>
+      <link>https://nanjishidu.me/2014/07/centos-redis-init.html</link>
       <pubDate>Sun, 06 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2014/07/centos-redis-init.html</guid>
+      <guid>https://nanjishidu.me/2014/07/centos-redis-init.html</guid>
       <description>&lt;p&gt;记录运维部署redis过程。&lt;/p&gt;</description>
     </item>
     

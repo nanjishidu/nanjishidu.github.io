@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bbr on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/bbr.html</link>
+    <link>https://nanjishidu.me/tags/bbr.html</link>
     <description>Recent content in bbr on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 29 Apr 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/bbr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/bbr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]服务器新旅程(virmach-vps-bbr)</title>
-      <link>https://nanjishidu.gophper.com/2017/04/gophper-virmach-vps-bbr.html</link>
+      <link>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</link>
       <pubDate>Sat, 29 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/04/gophper-virmach-vps-bbr.html</guid>
+      <guid>https://nanjishidu.me/2017/04/gophper-virmach-vps-bbr.html</guid>
       <description>&lt;p&gt;谷歌开源TCP BBR拥塞控制算法,并提交了linux内核,最新的 4.10 版内核已经用上了该算法。部署后测试后，网速提升了很多。采用virmach西雅图机房服务器进行测试,部署centos7。&lt;/p&gt;</description>
     </item>
     

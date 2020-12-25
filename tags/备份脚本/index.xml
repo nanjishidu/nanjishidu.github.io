@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>备份脚本 on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC.html</link>
+    <link>https://nanjishidu.me/tags/%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC.html</link>
     <description>Recent content in 备份脚本 on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Jun 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]服务器备份脚本</title>
-      <link>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</link>
+      <link>https://nanjishidu.me/2015/06/gophper-backup-shell.html</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2015/06/gophper-backup-shell.html</guid>
+      <guid>https://nanjishidu.me/2015/06/gophper-backup-shell.html</guid>
       <description>&lt;p&gt;数据备份在任何时候都要记住,这一点我一直没有意识。&lt;/p&gt;
 
 &lt;p&gt;有一次公司的服务器宕机了，官网无法访问，公司老大通过备份数据恢复保障官网的正常运行。&lt;/p&gt;</description>

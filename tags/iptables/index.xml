@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>iptables on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/iptables.html</link>
+    <link>https://nanjishidu.me/tags/iptables.html</link>
     <description>Recent content in iptables on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[gophper]centos7系统的改变</title>
-      <link>https://nanjishidu.gophper.com/2017/01/gophper-centos7.html</link>
+      <link>https://nanjishidu.me/2017/01/gophper-centos7.html</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/01/gophper-centos7.html</guid>
+      <guid>https://nanjishidu.me/2017/01/gophper-centos7.html</guid>
       <description>&lt;p&gt;阿里云推出免费试用6个月的活动,申请了免费试用,切换到centos7后发现了一些改变。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[gophper]配置iptables防火墙</title>
-      <link>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</link>
+      <link>https://nanjishidu.me/2015/06/gophper-iptables.html</link>
       <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2015/06/gophper-iptables.html</guid>
+      <guid>https://nanjishidu.me/2015/06/gophper-iptables.html</guid>
       <description>&lt;p&gt;阿里云为centos服务器,以下为防火墙规则备份,数据配置在/etc/sysconfig/iptables&lt;/p&gt;</description>
     </item>
     

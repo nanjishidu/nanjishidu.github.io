@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dig on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/dig.html</link>
+    <link>https://nanjishidu.me/tags/dig.html</link>
     <description>Recent content in dig on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Aug 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/dig/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/dig/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>dig命令</title>
-      <link>https://nanjishidu.gophper.com/2013/08/dns-dig.html</link>
+      <link>https://nanjishidu.me/2013/08/dns-dig.html</link>
       <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2013/08/dns-dig.html</guid>
+      <guid>https://nanjishidu.me/2013/08/dns-dig.html</guid>
       <description>&lt;p&gt;dig命令提供DNS解析查询。&lt;/p&gt;</description>
     </item>
     

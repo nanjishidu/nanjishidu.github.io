@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>二维码 on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81.html</link>
+    <link>https://nanjishidu.me/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81.html</link>
     <description>Recent content in 二维码 on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Mar 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>golang生成二维码及相关条码介绍</title>
-      <link>https://nanjishidu.gophper.com/2017/03/golang-qr-code39-code128.html</link>
+      <link>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</link>
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/03/golang-qr-code39-code128.html</guid>
+      <guid>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</guid>
       <description>&lt;p&gt;最近业务需求需要通过golang生成二维码,研究了&lt;a href=&#34;https://github.com/boombuler/barcode&#34; target=&#34;_blank&#34;&gt;github.com/boombuler/barcode&lt;/a&gt;,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。&lt;/p&gt;</description>
     </item>
     

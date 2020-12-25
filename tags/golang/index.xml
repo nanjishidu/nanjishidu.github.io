@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/golang.html</link>
+    <link>https://nanjishidu.me/tags/golang.html</link>
     <description>Recent content in golang on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 25 Nov 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>微信支付(退款结果通知)golang AES-256-ECB解密</title>
-      <link>https://nanjishidu.gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</link>
+      <link>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</link>
       <pubDate>Sat, 25 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
+      <guid>https://nanjishidu.me/2017/11/wx-pay-golang-aes-256-ecb.html</guid>
       <description>&lt;p&gt;处理微信支付退款结果通知时，需要对返回数据进行AES-256-ECB解密，golang标准库未支持AES ECB加解密，特此记录。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>golang生成二维码及相关条码介绍</title>
-      <link>https://nanjishidu.gophper.com/2017/03/golang-qr-code39-code128.html</link>
+      <link>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</link>
       <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/03/golang-qr-code39-code128.html</guid>
+      <guid>https://nanjishidu.me/2017/03/golang-qr-code39-code128.html</guid>
       <description>&lt;p&gt;最近业务需求需要通过golang生成二维码,研究了&lt;a href=&#34;https://github.com/boombuler/barcode&#34; target=&#34;_blank&#34;&gt;github.com/boombuler/barcode&lt;/a&gt;,发现支持生成QR码,code39,code128等。趁着这个机会, 对不同的条码概念进行记录。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>golang接口使用</title>
-      <link>https://nanjishidu.gophper.com/2016/09/golang-interface.html</link>
+      <link>https://nanjishidu.me/2016/09/golang-interface.html</link>
       <pubDate>Sat, 03 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2016/09/golang-interface.html</guid>
+      <guid>https://nanjishidu.me/2016/09/golang-interface.html</guid>
       <description>&lt;p&gt;interface类型定义了一组方法，如果某个对象实现了某个接口的所有方法，则此对象就实现了此接口&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Mac配置初始化部署</title>
-      <link>https://nanjishidu.gophper.com/2015/03/mac-init.html</link>
+      <link>https://nanjishidu.me/2015/03/mac-init.html</link>
       <pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2015/03/mac-init.html</guid>
+      <guid>https://nanjishidu.me/2015/03/mac-init.html</guid>
       <description>&lt;p&gt;记录mac系统初始化安装过程。安装xcode，brew，go环境，php环境。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ubuntu14.04安装初始化</title>
-      <link>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</link>
+      <link>https://nanjishidu.me/2014/06/ubuntu-init.html</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2014/06/ubuntu-init.html</guid>
+      <guid>https://nanjishidu.me/2014/06/ubuntu-init.html</guid>
       <description>&lt;p&gt;记录ubuntu系统初始化安装过程。&lt;/p&gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>npm on nanjishidu</title>
-    <link>https://nanjishidu.gophper.com/tags/npm.html</link>
+    <link>https://nanjishidu.me/tags/npm.html</link>
     <description>Recent content in npm on nanjishidu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nanjishidu.gophper.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanjishidu.me/tags/npm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>npm-check-updates升级element-ui2.x</title>
-      <link>https://nanjishidu.gophper.com/2017/12/npm-check-updates-element-ui.html</link>
+      <link>https://nanjishidu.me/2017/12/npm-check-updates-element-ui.html</link>
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://nanjishidu.gophper.com/2017/12/npm-check-updates-element-ui.html</guid>
+      <guid>https://nanjishidu.me/2017/12/npm-check-updates-element-ui.html</guid>
       <description>&lt;p&gt;element-ui发布2.x版本后，1.x版本停止维护。使用npm-check-updates检测项目package.json升级第三方包。&lt;/p&gt;</description>
     </item>
     
