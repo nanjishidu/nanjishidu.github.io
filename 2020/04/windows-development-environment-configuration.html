@@ -338,9 +338,31 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
 <li><p>修改setting.json</p>
 
 <pre><code>&quot;git.path&quot;: &quot;c:/msys64/usr/bin/git-vscode.bat&quot;,
+&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\msys64\\msys2_shell.cmd&quot;,
+&quot;terminal.integrated.shellArgs.windows&quot;: [
+&quot;-defterm&quot;, &quot;-mingw64&quot;, &quot;-no-start&quot;, &quot;-here&quot;, &quot;-lic&quot;, &quot;cd $PWD; exec zsh&quot;
+],
 </code></pre></li>
 
 <li><p>重启vscode</p></li>
+</ul>
+
+<h2 id="6-配置home路径为windows用户目录">6. 配置home路径为windows用户目录</h2>
+
+<ul>
+<li><p>修改/etc/nsswitch.conf</p>
+
+<pre><code>db_home: windows
+</code></pre></li>
+</ul>
+
+<h2 id="7-创建快捷方式">7. 创建快捷方式</h2>
+
+<ul>
+<li><p>右键新建快捷方式</p>
+
+<pre><code>C:\Windows\System32\cmd.exe /c C:\msys64\msys2_shell.cmd
+</code></pre></li>
 </ul>
               
             </div>
@@ -421,7 +443,7 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 nanjishidu. All Rights Reserved
+    &copy; 2021 nanjishidu. All Rights Reserved
   </span>
 </footer>
 
