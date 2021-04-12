@@ -272,10 +272,12 @@
 <li>进入msys2<a href="https://www.msys2.org/">官网</a>，安装msys2</li>
 <li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/msys2/">修改源</a></li>
 
-<li><p>使用pacman安装zsh git vim shell winpty</p>
+<li><p>使用pacman安装zsh git vim winpty</p>
 
-<pre><code>pacman -Sy zsh git vim shell winpty
+<pre><code>pacman -Sy zsh git vim winpty
 </code></pre></li>
+
+<li><p>安装<a href="https://ohmyz.sh/">oh-my-zsh</a></p></li>
 </ul>
 
 <h2 id="2-修改c-msys64-msys2-shell-cmd">2. 修改C:\msys64\msys2_shell.cmd</h2>
@@ -364,6 +366,37 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
 <pre><code>C:\Windows\System32\cmd.exe /c C:\msys64\msys2_shell.cmd
 </code></pre></li>
 </ul>
+
+<h2 id="8-microsoft-store-安装-windows-terminal-配置-msys2">8. Microsoft store 安装 Windows Terminal，配置 msys2</h2>
+
+<pre><code>// 修改defaultProfile为msys2 guid
+&quot;defaultProfile&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6301}&quot;,
+
+&quot;profiles&quot;:
+    {
+        &quot;defaults&quot;:
+        {
+            // Put settings here that you want to apply to all profiles.
+        },
+        &quot;list&quot;:
+        [
+
+// 添加msys2 start
+
+            {
+                // Make changes here to the powershell.exe profile.
+                &quot;guid&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6301}&quot;,
+                &quot;name&quot;: &quot;MSYS2&quot;,
+                &quot;commandline&quot;: &quot;C:\\msys64\\msys2_shell.cmd -msys -defterm -no-start&quot;,
+                &quot;hidden&quot;: false,
+                &quot;fontSize&quot;:16,
+                &quot;tabTitle&quot;: &quot;MSYS2&quot;,
+                &quot;colorScheme&quot;:&quot;Campbell&quot;,
+                &quot;startingDirectory&quot;:&quot;%userprofile%/cmd&quot;,
+                &quot;suppressApplicationTitle&quot;:true
+            },
+// 添加msys2 end            
+</code></pre>
               
             </div>
           </div>
