@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="nanjishidu">
 <meta name="keywords" content=", nanjishidu, golang, GO, go, docker, linux, linux, unix, DNS, shell">
-<meta name="description" content="windows开发环境配置">
+<meta name="description" content="windows mysql 安装配置">
 
 
-<meta property="og:description" content="windows开发环境配置">
+<meta property="og:description" content="windows mysql 安装配置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows开发环境配置">
-<meta name="twitter:title" content="windows开发环境配置">
-<meta property="og:url" content="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
-<meta property="twitter:url" content="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
+<meta property="og:title" content="windows mysql 安装配置">
+<meta name="twitter:title" content="windows mysql 安装配置">
+<meta property="og:url" content="https://nanjishidu.me/2021/04/windows-mysql.html">
+<meta property="twitter:url" content="https://nanjishidu.me/2021/04/windows-mysql.html">
 <meta property="og:site_name" content="nanjishidu">
-<meta property="og:description" content="windows开发环境配置">
-<meta name="twitter:description" content="windows开发环境配置">
+<meta property="og:description" content="windows mysql 安装配置">
+<meta name="twitter:description" content="windows mysql 安装配置">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-04-21T00:00:00">
+    <meta property="article:published_time" content="2021-04-12T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-04-21T00:00:00">
+    <meta property="article:modified_time" content="2021-04-12T00:00:00">
   
   
   
@@ -37,6 +37,8 @@
   
     
       <meta property="article:tag" content="windows">
+    
+      <meta property="article:tag" content="mysql">
     
   
 
@@ -49,8 +51,8 @@
 
 
 
-  <meta property="og:image" content="https://nanjishidu.me/media/2020/0421.jpg">
-  <meta property="twitter:image" content="https://nanjishidu.me/media/2020/0421.jpg">
+  <meta property="og:image" content="https://nanjishidu.me/media/2019/0308.jpg">
+  <meta property="twitter:image" content="https://nanjishidu.me/media/2019/0308.jpg">
 
 
 
@@ -60,14 +62,14 @@
   <meta property="twitter:image" content="https://nanjishidu.me/media/author.png">
 
 
-    <title>windows开发环境配置</title>
+    <title>windows mysql 安装配置</title>
 
     <link rel="icon" href="https://nanjishidu.me/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html">
+    <link rel="canonical" href="https://nanjishidu.me/2021/04/windows-mysql.html">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -237,15 +239,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      windows开发环境配置
+      windows mysql 安装配置
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-04-21T00:00:00Z">
+      <time itemprop="datePublished" datetime="2021-04-12T00:00:00Z">
         
-  April 21, 2020
+  April 12, 2021
 
       </time>
     
@@ -264,138 +266,62 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>windows开发环境配置</p>
+              <p>windows mysql 安装配置</p>
 
-<h2 id="1-msys2-zsh-on-my-zsh-git-vim-shell-winpty">1. msys2 zsh on-my-zsh git vim shell winpty</h2>
+<h2 id="1-下载-mysql5-7安装包-https-dev-mysql-com-downloads-mysql-5-7-html">1. 下载<a href="https://dev.mysql.com/downloads/mysql/5.7.html">mysql5.7安装包</a></h2>
 
-<ul>
-<li>进入msys2<a href="https://www.msys2.org/">官网</a>，安装msys2</li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/help/msys2/">修改源</a></li>
+<h2 id="2-配置环境变量">2. 配置环境变量</h2>
 
-<li><p>使用pacman安装zsh git vim winpty</p>
+<pre><code>MYSQL_HOME=C:\msys64\opt\environment\mysql-5.7.33
+PATH=%MYSQL_HOME%\bin
 
-<pre><code>pacman -Sy zsh git vim winpty
-</code></pre></li>
-
-<li><p>安装<a href="https://ohmyz.sh/">oh-my-zsh</a></p></li>
-</ul>
-
-<h2 id="2-修改c-msys64-msys2-shell-cmd">2. 修改C:\msys64\msys2_shell.cmd</h2>
-
-<ul>
-<li>修改<code>set &quot;LOGINSHELL=zsh&quot;</code></li>
-<li>取消注释<code>set MSYS=winsymlinks:nativestrict</code></li>
-
-<li><p>取消注释<code>set MSYS2_PATH_TYPE=inherit</code></p>
-
-<pre><code>set &quot;LOGINSHELL=zsh&quot;
-set /a msys2_shiftCounter=0
-
-rem To activate windows native symlinks uncomment next line
-set MSYS=winsymlinks:nativestrict
-
-rem Set debugging program for errors
-rem set MSYS=error_start:%WD%../../mingw64/bin/qtcreator.exe^|-debug^|^&lt;process-id^&gt;
-
-rem To export full current PATH from environment into MSYS2 use '-use-full-path' parameter
-rem or uncomment next line
-set MSYS2_PATH_TYPE=inherit
-</code></pre></li>
-</ul>
-
-<h2 id="3-修改-zshrc配置-winpty解决ping输出乱码问题">3. 修改~/.zshrc配置，winpty解决ping输出乱码问题</h2>
-
-<pre><code>alias ping=&quot;/bin/winpty ping&quot;
-alias netstat=&quot;/bin/winpty netstat&quot;
-alias nslookup=&quot;/bin/winpty nslookup&quot;
-alias open=&quot;shell&quot;
 </code></pre>
 
-<h2 id="4-解决on-my-zsh打开git目录卡顿-慢的问题">4. 解决on-my-zsh打开git目录卡顿、慢的问题</h2>
+<h2 id="3-新建data文件夹-然后再新建文本文件-重命名为my-ini-注意电脑可能未显示文件拓展名-my-ini文件不要放在data文件夹里">3. 新建data文件夹,然后再新建文本文件，重命名为my.ini(注意电脑可能未显示文件拓展名，my.ini文件不要放在data文件夹里)</h2>
 
-<pre><code>git config --global --add on-my-zsh.hide-dirty 1
-git config  --global --add on-my-zsh.hide-status 1
+<h2 id="4-my-ini">4. my.ini</h2>
 
-取消置为1
+<pre><code>[mysqld]
+# 设置服务端使用的字符集为utf-8
+character-set-server=utf8
+# 绑定IPv4地址
+bind-address = 0.0.0.0
+# 设置mysql的端口号
+port = 3306
+# 设置mysql的安装目录(能看到bin即可)
+basedir=C:\msys64\opt\environment\mysql-5.7.33
+# 设置mysql数据库的数据的存放目录(即data文件夹，必须是空目录)
+datadirC:\msys64\opt\environment\mysql-5.7.33\data
+# 允许最大连接数
+max_connections=2000
+# 创建新表时将使用的默认存储引擎
+default-storage-engine=INNODB
+# 设置mysql以及数据库的默认编码
+[mysql]
+default-character-set=utf8
+[mysql.server]
+default-character-set=utf8
+# 设置客户端默认字符集
+[client]
+default-character-set=utf8
 </code></pre>
 
-<h2 id="5-解决vscode源码管理器git不工作问题">5. 解决vscode源码管理器git不工作问题</h2>
+<h2 id="5">5.</h2>
 
-<ul>
-<li><p>在/usr/bin/下面新建git-vscode.bat</p>
+<pre><code># 继续在终端执行初始化命令（你可以初始化多次，但是每次必须清空data文件夹）
+mysqld --initialize-insecure --user=mysql
+# 安装命令
+mysqld --install
+# 卸载命令
+mysqld --remove
+</code></pre>
 
-<pre><code>@echo off
-setlocal
+<h2 id="6-在终端通过命令启动mysql服务">6. 在终端通过命令启动mysql服务</h2>
 
-rem If you don't add path for msys2 into %PATH%, enable following line.
-set PATH=c:\msys64\usr\bin;%PATH%
-
-if &quot;%1&quot; equ &quot;rev-parse&quot; goto rev_parse
-git %*
-goto :eof
-:rev_parse
-for /f %%1 in ('git %*') do cygpath -w %%1% 
-</code></pre></li>
-
-<li><p>修改setting.json</p>
-
-<pre><code>&quot;git.path&quot;: &quot;c:/msys64/usr/bin/git-vscode.bat&quot;,
-&quot;terminal.integrated.shell.windows&quot;: &quot;C:\\msys64\\msys2_shell.cmd&quot;,
-&quot;terminal.integrated.shellArgs.windows&quot;: [
-&quot;-defterm&quot;, &quot;-mingw64&quot;, &quot;-no-start&quot;, &quot;-here&quot;, &quot;-lic&quot;, &quot;cd $PWD; exec zsh&quot;
-],
-</code></pre></li>
-
-<li><p>重启vscode</p></li>
-</ul>
-
-<h2 id="6-配置home路径为windows用户目录">6. 配置home路径为windows用户目录</h2>
-
-<ul>
-<li><p>修改/etc/nsswitch.conf</p>
-
-<pre><code>db_home: windows
-</code></pre></li>
-</ul>
-
-<h2 id="7-创建快捷方式">7. 创建快捷方式</h2>
-
-<ul>
-<li><p>右键新建快捷方式</p>
-
-<pre><code>C:\Windows\System32\cmd.exe /c C:\msys64\msys2_shell.cmd
-</code></pre></li>
-</ul>
-
-<h2 id="8-microsoft-store-安装-windows-terminal-配置-msys2">8. Microsoft store 安装 Windows Terminal，配置 msys2</h2>
-
-<pre><code>// 修改defaultProfile为msys2 guid
-&quot;defaultProfile&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6301}&quot;,
-
-&quot;profiles&quot;:
-    {
-        &quot;defaults&quot;:
-        {
-            // Put settings here that you want to apply to all profiles.
-        },
-        &quot;list&quot;:
-        [
-
-// 添加msys2 start
-
-            {
-                // Make changes here to the powershell.exe profile.
-                &quot;guid&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6301}&quot;,
-                &quot;name&quot;: &quot;MSYS2&quot;,
-                &quot;commandline&quot;: &quot;C:\\msys64\\msys2_shell.cmd -msys -defterm -no-start&quot;,
-                &quot;hidden&quot;: false,
-                &quot;fontSize&quot;:16,
-                &quot;tabTitle&quot;: &quot;MSYS2&quot;,
-                &quot;colorScheme&quot;:&quot;Campbell&quot;,
-                &quot;startingDirectory&quot;:&quot;%userprofile%/cmd&quot;,
-                &quot;suppressApplicationTitle&quot;:true
-            },
-// 添加msys2 end            
+<pre><code># 启动mysql服务
+net start mysql
+# 停止mysql服务
+net stop mysql
 </code></pre>
               
             </div>
@@ -410,6 +336,8 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
                     
   <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/windows.html">windows</a>
 
+  <a class="tag tag--primary tag--small" href="https://nanjishidu.me/tags/mysql.html">mysql</a>
+
                   </div>
                 
               
@@ -421,7 +349,7 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2021/04/windows-mysql.html" data-tooltip="windows mysql 安装配置">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -429,7 +357,7 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/11/mysql-master-slave.html" data-tooltip="mysql主从同步">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html" data-tooltip="windows开发环境配置">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -489,7 +417,7 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2021/04/windows-mysql.html" data-tooltip="windows mysql 安装配置">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -497,7 +425,7 @@ for /f %%1 in ('git %*') do cygpath -w %%1%
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2019/11/mysql-master-slave.html" data-tooltip="mysql主从同步">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://nanjishidu.me/2020/04/windows-development-environment-configuration.html" data-tooltip="windows开发环境配置">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -636,9 +564,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/nanjishidu.me\/2020\/04\/windows-development-environment-configuration.html';
+          this.page.url = 'https:\/\/nanjishidu.me\/2021\/04\/windows-mysql.html';
           
-            this.page.identifier = '\/2020\/04\/windows-development-environment-configuration.html'
+            this.page.identifier = '\/2021\/04\/windows-mysql.html'
           
         };
         (function() {
